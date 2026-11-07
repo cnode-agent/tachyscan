@@ -5,8 +5,6 @@ import {
   indexLag,
   pruningDate,
   stampSummary,
-  tachygramActivity,
-  transactionForTachygram,
   transactionPools,
   transactionValueBalance,
 } from './lib';
@@ -40,25 +38,6 @@ describe('epoch timing', () => {
   });
 });
 
-describe('tachygram interactions', () => {
-  it('locates the transaction that revealed a tachygram', () => {
-    const selection = transactionForTachygram([{
-      hash: 'block',
-      height: 12,
-      time: 0,
-      transactions: [
-        { txid: 'coinbase' },
-        { txid: 'proof', tachyon: { stamp: { type: 'proof', tachygrams: ['abcd'] } } },
-      ],
-    }], 'abcd');
-
-    expect(selection?.transaction.txid).toBe('proof');
-    expect(selection?.blockHeight).toBe(12);
-    expect(selection?.coinbase).toBe(false);
-  });
-
-});
-
 describe('epoch instrument', () => {
   it('reports the epoch and one-based position of the tip', () => {
     expect(epochProgress(7, 8, 4096)).toBeNull();
@@ -66,32 +45,18 @@ describe('epoch instrument', () => {
     expect(epochProgress(8 + 4096 * 2 + 10, 8, 4096)).toMatchObject({ epoch: 2, index: 11 });
     expect(epochProgress(8 + 4095, 8, 4096)).toMatchObject({ epoch: 0, index: 4096, fraction: 1 });
   });
-  it('counts tachygrams per block over the trailing window, oldest first', () => {
-    const tachygrams = [
-      { value: 'a', revealedHeight: 100 },
-      { value: 'b', revealedHeight: 100 },
-      { value: 'c', revealedHeight: 98 },
-      { value: 'd', revealedHeight: 50 },
-    ];
-    expect(tachygramActivity(tachygrams, 100, 3)).toEqual([
-      { height: 98, count: 1 },
-      { height: 99, count: 0 },
-      { height: 100, count: 2 },
-    ]);
-    expect(tachygramActivity([], 1, 5)).toHaveLength(2);
-  });
 });
 
 describe('stamp summary', () => {
   it('separates proof stamps from pointers grouped by aggregate', () => {
     const summary = stampSummary([
-      { txid: 'a', tachyon: { actions: [{}, {}], stamp: { type: 'proof', tachygrams: ['x', 'y', 'z'] } } },
+      { txid: 'a', tachyon: { actions: [{}, {}], stamp: { type: 'proof' } } },
       { txid: 'b', tachyon: { actions: [{}], stamp: { type: 'pointer', aggregateId: 'agg' } } },
       { txid: 'c', tachyon: { actions: [{}], stamp: { type: 'pointer', aggregateId: 'agg' } } },
       { txid: 'd', tachyon: { actions: [] } },
       { txid: 'e' },
     ]);
-    expect(summary.proofs).toEqual([{ txid: 'a', tachygrams: 3, actions: 2, proofBytes: 0 }]);
+    expect(summary.proofs).toEqual([{ txid: 'a', actions: 2, proofBytes: 0 }]);
     expect(summary.aggregates).toEqual([{ id: 'agg', txids: ['b', 'c'] }]);
     expect(summary.unstamped).toBe(1);
   });

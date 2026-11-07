@@ -1,29 +1,13 @@
-import { useMemo, useState } from 'preact/hooks';
+import { useMemo } from 'preact/hooks';
 import type { EpochProgress } from './lib';
 import type { Dashboard } from './types';
-import { blockPath } from './explorer-route';
-import { transactionPath } from './transaction-route';
-import { ExplorerLink } from './ExplorerLink';
-import { HashGlyph } from './HashGlyph';
-import {
-  ACTIVITY_WINDOW,
-  durationUntil,
-  epochProgress,
-  indexLag,
-  pruningDate,
-  shortHash,
-  tachygramActivity,
-  transactionForTachygram,
-} from './lib';
+import { durationUntil, epochProgress, formatBytes, indexLag, pruningDate } from './lib';
 
-const RECENT_TACHYGRAMS = 5;
-
-export function EpochPanel({ dashboard, now, pulse, onNavigate }: {
+export function EpochPanel({ dashboard, now, pulse }: {
   dashboard: Dashboard;
   now: number;
   /** Changes when a new block lands so the ring can acknowledge it once. */
   pulse: number | null;
-  onNavigate: (path: string) => void;
 }) {
   const progress = epochProgress(dashboard.height, dashboard.activationHeight, dashboard.epochLength);
   const lag = indexLag(dashboard.index, dashboard.height);
@@ -31,16 +15,6 @@ export function EpochPanel({ dashboard, now, pulse, onNavigate }: {
     () => pruningDate(dashboard.height, dashboard.activationHeight, dashboard.epochLength, dashboard.blockTargetSeconds),
     [dashboard.height, dashboard.activationHeight, dashboard.epochLength, dashboard.blockTargetSeconds],
   );
-  const activity = useMemo(
-    () => tachygramActivity(dashboard.tachygrams, dashboard.height, ACTIVITY_WINDOW),
-    [dashboard.tachygrams, dashboard.height],
-  );
-  const newestFirst = useMemo(
-    () => [...dashboard.tachygrams].sort((a, b) => b.revealedHeight - a.revealedHeight || a.value.localeCompare(b.value)),
-    [dashboard.tachygrams],
-  );
-  const [showAll, setShowAll] = useState(false);
-  const listed = showAll ? newestFirst : newestFirst.slice(0, RECENT_TACHYGRAMS);
 
   if (!progress) {
     return (
@@ -55,79 +29,16 @@ export function EpochPanel({ dashboard, now, pulse, onNavigate }: {
     <section class="panel epoch-panel">
       <div class="panel-label">
         <span>EPOCH {progress.epoch.toLocaleString()}</span>
-        <b>
-          {dashboard.retainedTachygramCount.toLocaleString()} retained
+        <b class="epoch-retention">
+          <span>{dashboard.retainedTachygramCount.toLocaleString()} retained</span>
+          <span aria-hidden="true">·</span>
+          <span>{formatBytes(dashboard.tachygramPayloadBytes)} non-pruned</span>
           {lag > 0 && <em class="index-lag" title={`The tachygram index is ${lag} block${lag === 1 ? '' : 's'} behind the chain tip`}>indexing {dashboard.index.scannedHeight?.toLocaleString()}</em>}
         </b>
       </div>
 
       <EpochRing progress={progress} pruneText={durationUntil(pruneAt, now)} pulse={pulse} />
-
-      <ActivityStrip activity={activity} onNavigate={onNavigate} />
-
-      <div class={`recent-tachygrams ${showAll ? 'expanded' : ''}`}>
-        <div class="recent-head">
-          <p class="section-kicker">{showAll ? 'RETAINED TACHYGRAMS' : 'LATEST TACHYGRAMS'}</p>
-          {newestFirst.length > RECENT_TACHYGRAMS && (
-            <button type="button" class="link-button" onClick={() => setShowAll((open) => !open)} aria-expanded={showAll}>
-              {showAll ? 'Show latest only' : `Show all ${newestFirst.length.toLocaleString()}`}
-            </button>
-          )}
-        </div>
-        {listed.length ? (
-          <ul>
-            {listed.map((tachygram) => {
-              const selection = transactionForTachygram(dashboard.blocks, tachygram.value);
-              const label = <>
-                <HashGlyph hash={tachygram.value} size={12} />
-                <code title={tachygram.value}>{shortHash(tachygram.value, 10, 6)}</code>
-                <span>block {tachygram.revealedHeight.toLocaleString()}</span>
-              </>;
-              return (
-                <li key={tachygram.value}>
-                  {selection
-                    ? <ExplorerLink href={transactionPath(selection.transaction.txid)} onNavigate={onNavigate} title="Open the transaction that revealed this tachygram">{label}</ExplorerLink>
-                    : <ExplorerLink href={blockPath(tachygram.revealedHeight)} onNavigate={onNavigate} title="Open the block that revealed this tachygram">{label}</ExplorerLink>}
-                  <CopyButton value={tachygram.value} />
-                </li>
-              );
-            })}
-          </ul>
-        ) : <p class="epoch-empty">No tachygrams retained yet.</p>}
-      </div>
     </section>
-  );
-}
-
-function ActivityStrip({ activity, onNavigate }: {
-  activity: { height: number; count: number }[];
-  onNavigate: (path: string) => void;
-}) {
-  const max = Math.max(1, ...activity.map((point) => point.count));
-  const total = activity.reduce((sum, point) => sum + point.count, 0);
-  const first = activity[0]?.height ?? 0;
-  const last = activity.at(-1)?.height ?? 0;
-  return (
-    <div class="activity">
-      <div class="activity-head">
-        <p class="section-kicker">TACHYGRAMS PER BLOCK</p>
-        <span>{total.toLocaleString()} in the last {activity.length.toLocaleString()} blocks</span>
-      </div>
-      <div class="activity-strip" role="list" aria-label="Tachygrams revealed per block">
-        {activity.map((point) => (
-          <ExplorerLink
-            key={point.height}
-            class={`activity-bar ${point.count ? 'active' : ''}`}
-            href={blockPath(point.height)}
-            onNavigate={onNavigate}
-            title={`Block ${point.height.toLocaleString()}: ${point.count} tachygram${point.count === 1 ? '' : 's'}`}
-          >
-            <span style={{ height: `${point.count ? Math.max(8, (point.count / max) * 100) : 2}%` }} />
-          </ExplorerLink>
-        ))}
-      </div>
-      <div class="activity-caption"><span>{first.toLocaleString()}</span><span>{last.toLocaleString()}</span></div>
-    </div>
   );
 }
 
@@ -184,26 +95,5 @@ function EpochRing({ progress, pruneText, pulse }: {
         <span class="ring-detail">prunes in <b>{pruneText}</b></span>
       </div>
     </div>
-  );
-}
-
-function CopyButton({ value }: { value: string }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      type="button"
-      class={`copy-button ${copied ? 'copied' : ''}`}
-      title={copied ? 'Copied' : 'Copy the full tachygram'}
-      aria-label={copied ? 'Copied' : 'Copy the full tachygram'}
-      onClick={async () => {
-        try {
-          await navigator.clipboard?.writeText(value);
-          setCopied(true);
-          window.setTimeout(() => setCopied(false), 1200);
-        } catch {
-          // Clipboard access can be refused; the hover title still shows the value.
-        }
-      }}
-    >{copied ? 'copied' : 'copy'}</button>
   );
 }

@@ -18,8 +18,8 @@ export function StampMarks({ transactions }: { transactions: Transaction[] }) {
   );
 }
 
-/** How the node stamped this block: proof stamps carry tachygrams and a proof; pointer
- *  stamps reference an aggregate instead of carrying their own. */
+/** How the node stamped this block: proof stamps carry a proof; pointer stamps reference
+ *  an aggregate instead of carrying their own. */
 export function StampView({ transactions, onNavigate }: {
   transactions: Transaction[];
   onNavigate: (path: string) => void;
@@ -37,7 +37,7 @@ export function StampView({ transactions, onNavigate }: {
             <ExplorerLink key={proof.txid} class="stamp-card proof" href={transactionPath(proof.txid)} onNavigate={onNavigate}>
               <HashGlyph hash={proof.txid} size={22} />
               <span class="stamp-id" title={proof.txid}>{shortHash(proof.txid, 10, 6)}</span>
-              <span class="stamp-meta">{proof.tachygrams} tachygrams, {proof.actions} action{proof.actions === 1 ? '' : 's'}{proof.proofBytes ? `, ${formatBytes(proof.proofBytes)} proof` : ''}</span>
+              <span class="stamp-meta">{proof.actions} action{proof.actions === 1 ? '' : 's'}{proof.proofBytes ? `, ${formatBytes(proof.proofBytes)} proof` : ''}</span>
             </ExplorerLink>
           )) : <p class="stamp-none">None. Every Tachyon transaction here points at an aggregate.</p>}
         </div>

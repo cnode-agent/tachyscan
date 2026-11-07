@@ -19,8 +19,8 @@ const block: BlockDetails = {
 const dashboard: Dashboard = {
   network: 'TachyonTestnet', height: 3796, bestBlockHash: '12'.repeat(32),
   activationHeight: 8, epochLength: 4096, blockTargetSeconds: 75, nextBlockEstimate: null,
-  accumulator: null, retainedTachygramCount: 0, tachygrams: [], footprintBytes: 0,
-  footprintHistory: [], index: { phase: 'ready', scannedHeight: 3796, targetHeight: 3796 },
+  accumulator: null, retainedTachygramCount: 0, tachygramPayloadBytes: 0,
+  payloadHistory: [], index: { phase: 'ready', scannedHeight: 3796, targetHeight: 3796 },
   blocks: [{ hash, height: block.height, time: block.time, transactions: block.tx }], page: 1, pageCount: 10,
 };
 let host: HTMLDivElement;
@@ -81,8 +81,9 @@ describe('site navigation', () => {
     expect(current()).toBe('Pool info');
     expect(document.title).toBe('Pool info · Tachyscan');
     expect(host.querySelector('.epoch-panel')).not.toBeNull();
-    expect(host.querySelector('.activity-strip')).not.toBeNull();
-    expect(host.querySelector('.recent-tachygrams')).not.toBeNull();
+    expect(host.querySelector('.epoch-retention')?.textContent).toContain('0 retained');
+    expect(host.querySelector('.epoch-retention')?.textContent).toContain('0 B non-pruned');
+    expect(host.querySelector('.activity-strip, .recent-tachygrams')).toBeNull();
     expect(host.querySelector('.chart-frame')).not.toBeNull();
     expect(host.querySelector('.transactions-panel')).toBeNull();
     await click('/');

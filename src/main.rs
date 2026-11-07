@@ -29,7 +29,6 @@ const TACHYGRAM_BYTES: u64 = 32;
 const MAX_CHART_EPOCHS: u32 = 6;
 const DEFAULT_BLOCK_TARGET_SECONDS: u64 = 75;
 const BLOCK_CADENCE_SAMPLE_LIMIT: usize = 12;
-const DASHBOARD_TACHYGRAM_LIMIT: usize = 42;
 /// How far behind the tip the index may be for a dashboard request to catch it up inline.
 const CATCH_UP_BLOCKS: u32 = 64;
 
@@ -149,6 +148,28 @@ impl RpcBlock {
     }
 }
 
+/// Remove per-transaction tachygram identities before a value leaves the explorer API.
+///
+/// The node's verbose transactions include the stamp's individual tachygrams. The explorer
+/// deliberately exposes only aggregate retention statistics, so those arrays never need to
+/// cross the API boundary (and they are large).
+pub(crate) fn strip_tachygram_arrays(value: &mut Value) {
+    match value {
+        Value::Object(object) => {
+            object.remove("tachygrams");
+            for child in object.values_mut() {
+                strip_tachygram_arrays(child);
+            }
+        }
+        Value::Array(items) => {
+            for item in items {
+                strip_tachygram_arrays(item);
+            }
+        }
+        _ => {}
+    }
+}
+
 #[derive(Deserialize)]
 struct BlockchainInfo {
     chain: String,
@@ -173,14 +194,6 @@ struct TachyonInfo {
     tip_anchor: String,
     retained_tachygram_count: usize,
     tachygram_payload_bytes: u64,
-    recent_tachygrams: Vec<RpcRetainedTachygram>,
-}
-
-#[derive(Debug, Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct RpcRetainedTachygram {
-    tachygram: String,
-    revealed_height: u32,
 }
 
 #[derive(Debug, Default)]
@@ -308,21 +321,13 @@ struct DashboardResponse {
     next_block_estimate: Option<i64>,
     accumulator: Option<String>,
     retained_tachygram_count: usize,
-    tachygrams: Vec<TachygramResponse>,
     tachyon_pool_zat: Option<i64>,
-    footprint_bytes: u64,
-    footprint_history: Vec<FootprintPoint>,
+    tachygram_payload_bytes: u64,
+    payload_history: Vec<FootprintPoint>,
     index: IndexStatus,
     blocks: Vec<RpcBlock>,
     page: u32,
     page_count: u32,
-}
-
-#[derive(Serialize)]
-#[serde(rename_all = "camelCase")]
-struct TachygramResponse {
-    value: String,
-    revealed_height: u32,
 }
 
 #[tokio::main]
@@ -461,41 +466,6 @@ async fn dashboard(
         .map_err(|error| (StatusCode::BAD_GATEWAY, Json(json!({ "error": error }))))
 }
 
-fn dashboard_tachygrams(
-    index: &TachyonIndex,
-    tachyon_info: Option<&TachyonInfo>,
-) -> Vec<TachygramResponse> {
-    let mut tachygrams = tachyon_info.map_or_else(
-        || {
-            index
-                .tachygrams
-                .iter()
-                .map(|(value, revealed_height)| TachygramResponse {
-                    value: value.clone(),
-                    revealed_height: *revealed_height,
-                })
-                .collect::<Vec<_>>()
-        },
-        |info| {
-            info.recent_tachygrams
-                .iter()
-                .map(|tachygram| TachygramResponse {
-                    value: tachygram.tachygram.clone(),
-                    revealed_height: tachygram.revealed_height,
-                })
-                .collect()
-        },
-    );
-    tachygrams.sort_unstable_by(|left, right| {
-        right
-            .revealed_height
-            .cmp(&left.revealed_height)
-            .then_with(|| right.value.cmp(&left.value))
-    });
-    tachygrams.truncate(DASHBOARD_TACHYGRAM_LIMIT);
-    tachygrams
-}
-
 async fn build_dashboard(
     state: &AppState,
     query: DashboardQuery,
@@ -520,18 +490,23 @@ async fn build_dashboard(
     let newest = info.blocks.saturating_sub((page - 1).saturating_mul(limit));
     let oldest = newest.saturating_sub(limit - 1).max(activation_height);
     let heights: Vec<u32> = (oldest..=newest).rev().collect();
-    let blocks: Vec<RpcBlock> = stream::iter(heights)
+    let mut blocks: Vec<RpcBlock> = stream::iter(heights)
         .map(|height| state.rpc.block_at(height))
         .buffered(8)
         .try_collect()
         .await?;
+    for block in &mut blocks {
+        for transaction in &mut block.transactions {
+            strip_tachygram_arrays(transaction);
+        }
+    }
 
     let (block_target_seconds, next_block_estimate) =
         state.block_cadence.lock().await.observe(info.blocks);
 
     // Serve the index-derived fields at the tip this response reports. The background
     // loop polls every few seconds, so without this a fresh block leaves the header one
-    // block ahead of the tachygrams, activity and footprint beneath it.
+    // block ahead of the retention and payload history beneath it.
     let lag = {
         let index = state.index.read().await;
         match (index.status.phase.as_str(), index.scanned_height) {
@@ -557,7 +532,6 @@ async fn build_dashboard(
         Some(tip) if tip.height == info.blocks => tip.tachyon_pool_zat(),
         _ => state.rpc.block_at(info.blocks).await?.tachyon_pool_zat(),
     };
-    let tachygrams = dashboard_tachygrams(&index, tachyon_info.as_ref());
     let accumulator = tachyon_info
         .as_ref()
         .map(|info| info.tip_anchor.clone())
@@ -565,14 +539,14 @@ async fn build_dashboard(
     let epoch_length = tachyon_info
         .as_ref()
         .map_or(state.epoch_length, |info| info.epoch_length);
-    let footprint_bytes = tachyon_info
-        .as_ref()
-        .map_or(tachygrams.len() as u64 * TACHYGRAM_BYTES, |info| {
-            info.tachygram_payload_bytes
-        });
     let retained_tachygram_count = tachyon_info
         .as_ref()
-        .map_or(tachygrams.len(), |info| info.retained_tachygram_count);
+        .map_or(index.tachygrams.len(), |info| info.retained_tachygram_count);
+    let tachygram_payload_bytes = tachyon_info
+        .as_ref()
+        .map_or(retained_tachygram_count as u64 * TACHYGRAM_BYTES, |info| {
+            info.tachygram_payload_bytes
+        });
 
     Ok(DashboardResponse {
         network: info.chain,
@@ -585,9 +559,8 @@ async fn build_dashboard(
         accumulator,
         retained_tachygram_count,
         tachyon_pool_zat,
-        footprint_bytes,
-        tachygrams,
-        footprint_history: index.footprint_history,
+        tachygram_payload_bytes,
+        payload_history: index.footprint_history,
         index: index.status,
         blocks,
         page,
@@ -850,7 +823,22 @@ mod tests {
         assert_eq!(info.activation_height, 7);
         assert_eq!(info.tip_anchor, "11".repeat(32));
         assert_eq!(info.retained_tachygram_count, 2);
-        assert_eq!(info.recent_tachygrams[0].revealed_height, 12);
+        assert_eq!(info.tachygram_payload_bytes, 64);
+    }
+
+    #[test]
+    fn strips_individual_tachygrams_without_removing_the_set_digest() {
+        let mut transaction = json!({
+            "txid": "11",
+            "tachyon": { "stamp": {
+                "type": "proof",
+                "tachygramSet": "22",
+                "tachygrams": ["33", "44"]
+            }}
+        });
+        strip_tachygram_arrays(&mut transaction);
+        assert!(transaction["tachyon"]["stamp"].get("tachygrams").is_none());
+        assert_eq!(transaction["tachyon"]["stamp"]["tachygramSet"], "22");
     }
 
     #[test]
@@ -867,18 +855,6 @@ mod tests {
 
         assert!(serialized.get("tx").is_none());
         assert_eq!(serialized["transactions"][0]["txid"], "11");
-    }
-
-    #[test]
-    fn dashboard_tachygram_sample_is_bounded_and_newest_first() {
-        let mut index = TachyonIndex::default();
-        for height in 1..=100u32 {
-            index.tachygrams.insert(format!("{height:064x}"), height);
-        }
-        let sample = dashboard_tachygrams(&index, None);
-        assert_eq!(sample.len(), DASHBOARD_TACHYGRAM_LIMIT);
-        assert_eq!(sample[0].revealed_height, 100);
-        assert_eq!(sample[41].revealed_height, 59);
     }
 
     #[tokio::test]
@@ -946,8 +922,15 @@ mod tests {
         assert_eq!(dashboard.height, 9);
         assert_eq!(dashboard.index.phase, "ready");
         assert_eq!(dashboard.index.scanned_height, Some(9));
-        assert_eq!(dashboard.footprint_history.last().unwrap().height, 9);
+        assert_eq!(dashboard.payload_history.last().unwrap().height, 9);
         assert_eq!(dashboard.tachyon_pool_zat, Some(509));
+        assert_eq!(dashboard.retained_tachygram_count, 0);
+        assert_eq!(dashboard.tachygram_payload_bytes, 0);
+        let serialized = serde_json::to_value(&dashboard).unwrap();
+        assert!(serialized.get("tachygrams").is_none());
+        assert_eq!(serialized["retainedTachygramCount"], 0);
+        assert_eq!(serialized["tachygramPayloadBytes"], 0);
+        assert_eq!(serialized["payloadHistory"][0]["height"], 8);
 
         // Far behind, the request answers immediately and says so instead of catching up.
         tip.store(9 + CATCH_UP_BLOCKS + 1, Ordering::SeqCst);

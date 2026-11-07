@@ -12,20 +12,19 @@ function useClock() {
   return now;
 }
 
-export function PoolInfoPage({ dashboard, pulse, onNavigate }: {
+export function PoolInfoPage({ dashboard, pulse }: {
   dashboard: Dashboard;
   pulse: number | null;
-  onNavigate: (path: string) => void;
 }) {
   const now = useClock();
   return (
     <section class="pool-info-page" aria-labelledby="pool-info-heading">
       <div class="pool-info-title"><p class="section-kicker">TACHYON POOL</p><h2 id="pool-info-heading">Pool info</h2></div>
       <div class="pool-info-grid">
-        <EpochPanel dashboard={dashboard} now={now} pulse={pulse} onNavigate={onNavigate} />
+        <EpochPanel dashboard={dashboard} now={now} pulse={pulse} />
         <section class="footprint-section">
-          <p class="section-kicker">TACHYGRAM PAYLOAD FOOTPRINT</p>
-          <h2>{formatBytes(dashboard.footprintBytes)}</h2>
+          <p class="section-kicker">NON-PRUNED TACHYGRAM PAYLOAD</p>
+          <h2>{formatBytes(dashboard.tachygramPayloadBytes)}</h2>
           <FootprintChart dashboard={dashboard} />
         </section>
       </div>
@@ -34,7 +33,7 @@ export function PoolInfoPage({ dashboard, pulse, onNavigate }: {
 }
 
 function FootprintChart({ dashboard }: { dashboard: Dashboard }) {
-  const points = dashboard.footprintHistory;
+  const points = dashboard.payloadHistory;
   const [hover, setHover] = useState<number | null>(null);
   const width = 620;
   const height = 270;
@@ -67,7 +66,7 @@ function FootprintChart({ dashboard }: { dashboard: Dashboard }) {
       <svg
         viewBox={`0 0 ${width} ${height}`}
         role="img"
-        aria-label="Tachygram payload footprint over block height"
+        aria-label="Non-pruned tachygram payload over block height"
         onPointerMove={locate}
         onPointerLeave={() => setHover(null)}
       >
@@ -85,7 +84,7 @@ function FootprintChart({ dashboard }: { dashboard: Dashboard }) {
       </svg>
       <div class="chart-caption">
         {focus
-          ? <><span>BLOCK {focus.height.toLocaleString()}</span><span class="chart-readout">{formatBytes(focus.bytes)} retained</span><span>{maxHeight.toLocaleString()}</span></>
+          ? <><span>BLOCK {focus.height.toLocaleString()}</span><span class="chart-readout">{formatBytes(focus.bytes)} non-pruned</span><span>{maxHeight.toLocaleString()}</span></>
           : <><span>BLOCK {minHeight.toLocaleString()}</span><span>{boundaries.length ? 'epoch boundary ┊' : ''}</span><span>{maxHeight.toLocaleString()}</span></>}
       </div>
       {dashboard.index.phase === 'syncing' && (

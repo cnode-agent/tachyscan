@@ -8,20 +8,15 @@ export interface Dashboard {
   nextBlockEstimate: number | null;
   accumulator: string | null;
   retainedTachygramCount: number;
-  tachygrams: Tachygram[];
+  /** Current non-pruned tachygram payload size in bytes. */
+  tachygramPayloadBytes: number;
   /** Tachyon pool balance after the tip, when the node reports value pools. */
   tachyonPoolZat?: number | null;
-  footprintBytes: number;
-  footprintHistory: FootprintPoint[];
+  payloadHistory: PayloadPoint[];
   index: IndexStatus;
   blocks: ExplorerBlock[];
   page: number;
   pageCount: number;
-}
-
-export interface Tachygram {
-  value: string;
-  revealedHeight: number;
 }
 
 export interface TransactionSelection {
@@ -30,7 +25,7 @@ export interface TransactionSelection {
   coinbase: boolean;
 }
 
-export interface FootprintPoint {
+export interface PayloadPoint {
   height: number;
   bytes: number;
 }
@@ -88,7 +83,6 @@ export interface TachyonBundle extends ShieldedBundle {
   stamp?: {
     type?: 'proof' | 'pointer';
     anchor?: string;
-    tachygrams?: string[];
     coverage?: string;
     tachygramSet?: string;
     proof?: string;

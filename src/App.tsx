@@ -49,7 +49,7 @@ export function App() {
   const dashboardPage = section === 'pool-info' ? 1 : page;
   const [transactionError, setTransactionError] = useState<string | null>(null);
   const [animateStream, setAnimateStream] = useState(
-    () => localStorage.getItem('tachyscan-stream-motion') !== 'off',
+    () => window.localStorage?.getItem('tachyscan-stream-motion') !== 'off',
   );
   const [arrivalHeight, setArrivalHeight] = useState<number | null>(null);
   const previousHeight = useRef<number | null>(null);
@@ -121,7 +121,7 @@ export function App() {
   const toggleStreamAnimation = () => {
     setAnimateStream((enabled) => {
       const next = !enabled;
-      localStorage.setItem('tachyscan-stream-motion', next ? 'on' : 'off');
+      window.localStorage?.setItem('tachyscan-stream-motion', next ? 'on' : 'off');
       return next;
     });
   };
@@ -153,7 +153,7 @@ export function App() {
             {!dashboard ? (
               loading ? <LoadingScreen /> : <ConnectionError message={error ?? 'Unable to reach Tachyscan'} />
             ) : section === 'pool-info' ? (
-              <PoolInfoPage dashboard={dashboard} pulse={animateStream ? arrivalHeight : null} onNavigate={navigate} />
+              <PoolInfoPage dashboard={dashboard} pulse={animateStream ? arrivalHeight : null} />
             ) : blockId !== null ? (
               <BlockPage key={blockId} id={blockId} network={dashboard.network} onNavigate={navigate} />
             ) : (
@@ -422,10 +422,8 @@ function TransactionDetails({ transaction }: { transaction: Transaction }) {
         {transaction.tachyon?.stamp?.type && <Detail label="Stamp" value={transaction.tachyon.stamp.type} />}
         {transaction.tachyon?.stamp?.anchor && <Detail label="Anchor" value={shortHash(transaction.tachyon.stamp.anchor, 10, 7)} title={transaction.tachyon.stamp.anchor} glyph={transaction.tachyon.stamp.anchor} />}
         {transaction.tachyon?.stamp?.coverage && <Detail label="Coverage digest" value={shortHash(transaction.tachyon.stamp.coverage, 10, 7)} title={transaction.tachyon.stamp.coverage} glyph={transaction.tachyon.stamp.coverage} />}
-        {transaction.tachyon?.stamp?.tachygramSet && <Detail label="Tachygram set" value={shortHash(transaction.tachyon.stamp.tachygramSet, 10, 7)} title={transaction.tachyon.stamp.tachygramSet} glyph={transaction.tachyon.stamp.tachygramSet} />}
         {transaction.tachyon?.stamp?.aggregateId && <Detail label="Aggregate" value={shortHash(transaction.tachyon.stamp.aggregateId, 10, 7)} title={transaction.tachyon.stamp.aggregateId} glyph={transaction.tachyon.stamp.aggregateId} />}
         {transaction.tachyon?.stamp?.proof && <Detail label="Proof size" value={formatBytes(transaction.tachyon.stamp.proof.length / 2)} />}
-        {transaction.tachyon?.stamp?.tachygrams && <Detail label="Tachygrams" value={String(transaction.tachyon.stamp.tachygrams.length)} />}
       </div>
       <JsonViewer key={transaction.txid} value={transaction} />
     </div>

@@ -55,7 +55,7 @@ pub(crate) async fn block(
         .map_err(|error| (StatusCode::BAD_GATEWAY, Json(json!({ "error": error }))))
 }
 
-fn validate_block(hash: &str, height: Option<u32>, block: Value) -> Result<Value, String> {
+fn validate_block(hash: &str, height: Option<u32>, mut block: Value) -> Result<Value, String> {
     let actual_height = block.get("height").and_then(Value::as_u64);
     if block.get("hash").and_then(Value::as_str) != Some(hash)
         || actual_height.is_none_or(|value| u32::try_from(value).is_err())
@@ -80,6 +80,8 @@ fn validate_block(hash: &str, height: Option<u32>, block: Value) -> Result<Value
         return Err("Zakura returned a mismatched or invalid verbose block".to_string());
     }
     // Keep all RPC fields (including Tachyon data) for the JSON explorer, not just the summary.
+    // Individual tachygrams stay out of the API; aggregate retention is served by the dashboard.
+    crate::strip_tachygram_arrays(&mut block);
     Ok(block)
 }
 
@@ -141,6 +143,20 @@ mod tests {
             invalid_block[field] = invalid;
             assert!(validate_block(&hash, None, invalid_block).is_err());
         }
+    }
+
+    #[test]
+    fn strips_individual_tachygrams_from_block_transactions() {
+        let hash = "ab".repeat(32);
+        let mut block = sample_block();
+        block["tx"][0]["tachyon"]["stamp"] = json!({
+            "type": "proof", "tachygramSet": "22", "tachygrams": ["33", "44"]
+        });
+        let validated = validate_block(&hash, Some(12), block).unwrap();
+        assert!(validated["tx"][0]["tachyon"]["stamp"]
+            .get("tachygrams")
+            .is_none());
+        assert_eq!(validated["tx"][0]["tachyon"]["stamp"]["tachygramSet"], "22");
     }
 
     #[tokio::test]

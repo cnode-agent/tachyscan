@@ -45,11 +45,12 @@ pub(crate) async fn transaction(
 
 fn selection_from_transaction(
     txid: &str,
-    transaction: Value,
+    mut transaction: Value,
 ) -> Result<TransactionSelection, String> {
     if transaction.get("txid").and_then(Value::as_str) != Some(txid) {
         return Err("Zakura returned a different or missing transaction ID".to_string());
     }
+    crate::strip_tachygram_arrays(&mut transaction);
     // No height means mempool; -1 means the transaction is in a side-chain block.
     let block_height = transaction
         .get("height")
@@ -125,16 +126,25 @@ mod tests {
     }
 
     #[test]
-    fn preserves_full_transaction_and_confirmed_metadata() {
+    fn preserves_protocol_metadata_but_removes_individual_tachygrams() {
         let txid = "a1".repeat(32);
         let transaction = json!({
             "txid": txid, "height": 123, "vin": [{ "coinbase": "0101" }],
-            "tachyon": { "actions": [{ "cv": "test" }] }
+            "tachyon": {
+                "actions": [{ "cv": "test" }],
+                "stamp": { "type": "proof", "tachygramSet": "22", "tachygrams": ["33", "44"] }
+            }
         });
-        let selection = selection_from_transaction(&txid, transaction.clone()).unwrap();
+        let selection = selection_from_transaction(&txid, transaction).unwrap();
         assert_eq!(selection.block_height, Some(123));
         assert!(selection.coinbase);
-        assert_eq!(selection.transaction, transaction);
+        assert!(selection.transaction["tachyon"]["stamp"]
+            .get("tachygrams")
+            .is_none());
+        assert_eq!(
+            selection.transaction["tachyon"]["stamp"]["tachygramSet"],
+            "22"
+        );
         let json = serde_json::to_value(selection).unwrap();
         assert_eq!(json["blockHeight"], 123);
     }

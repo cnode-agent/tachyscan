@@ -1,4 +1,4 @@
-import type { ExplorerBlock, Tachygram, Transaction, TransactionSelection } from './types';
+import type { Transaction } from './types';
 
 export const POOL_TYPES = [
   { key: 'ironwood', label: 'Ironwood' },
@@ -31,25 +31,6 @@ export function transactionValueBalance(tx: Transaction): number | null {
   ].filter((value): value is number => typeof value === 'number');
 
   return values.length ? values.reduce((total, value) => total + value, 0) : null;
-}
-
-export function transactionForTachygram(
-  blocks: ExplorerBlock[],
-  tachygram: string,
-): TransactionSelection | null {
-  for (const block of blocks) {
-    const transactionIndex = block.transactions.findIndex((transaction) =>
-      transaction.tachyon?.stamp?.tachygrams?.includes(tachygram),
-    );
-    if (transactionIndex >= 0) {
-      return {
-        transaction: block.transactions[transactionIndex],
-        blockHeight: block.height,
-        coinbase: transactionIndex === 0,
-      };
-    }
-  }
-  return null;
 }
 
 export function formatZec(zatoshis: number | null): string {
@@ -102,9 +83,6 @@ export function pruningDate(
   return new Date(Date.now() + blocksRemaining * blockSeconds * 1000).toISOString();
 }
 
-/** Blocks shown in the per-block tachygram activity strip. */
-export const ACTIVITY_WINDOW = 96;
-
 export interface EpochProgress {
   /** Zero-based epoch index since activation. */
   epoch: number;
@@ -121,16 +99,6 @@ export function epochProgress(height: number, activationHeight: number, epochLen
   return { epoch: Math.floor(poolHeight / epochLength), index, length: epochLength, fraction: index / epochLength };
 }
 
-/** Tachygrams revealed per block over the `window` blocks ending at `tip`, oldest first. */
-export function tachygramActivity(tachygrams: Tachygram[], tip: number, window: number): { height: number; count: number }[] {
-  const from = Math.max(0, tip - window + 1);
-  const counts = new Map<number, number>();
-  for (const { revealedHeight } of tachygrams) {
-    if (revealedHeight >= from && revealedHeight <= tip) counts.set(revealedHeight, (counts.get(revealedHeight) ?? 0) + 1);
-  }
-  return Array.from({ length: tip - from + 1 }, (_, offset) => ({ height: from + offset, count: counts.get(from + offset) ?? 0 }));
-}
-
 /** A colour between the gold and ivory accents chosen by the hash's last byte. */
 export function hashTint(hash: string): string {
   const byte = parseInt(hash.slice(-2), 16);
@@ -143,7 +111,6 @@ export function hashTint(hash: string): string {
 
 export interface ProofStampRef {
   txid: string;
-  tachygrams: number;
   actions: number;
   /** Serialized proof size, when the node includes the proof bytes. */
   proofBytes: number;
@@ -161,8 +128,8 @@ export interface StampSummary {
   unstamped: number;
 }
 
-/** How a block's Tachyon transactions are stamped: proof stamps carry the tachygrams and the
- *  proof; pointer stamps defer to an aggregate the node built from several transactions. */
+/** How a block's Tachyon transactions are stamped: proof stamps carry a proof;
+ *  pointer stamps defer to an aggregate the node built from several transactions. */
 export function stampSummary(transactions: Transaction[]): StampSummary {
   const proofs: ProofStampRef[] = [];
   const aggregates = new Map<string, string[]>();
@@ -174,7 +141,6 @@ export function stampSummary(transactions: Transaction[]): StampSummary {
     if (stamp?.type === 'proof') {
       proofs.push({
         txid: transaction.txid,
-        tachygrams: stamp.tachygrams?.length ?? 0,
         actions: bundle.actions?.length ?? 0,
         proofBytes: typeof stamp.proof === 'string' ? stamp.proof.length / 2 : 0,
       });
