@@ -116,8 +116,9 @@ footer { display: flex; justify-content: center; align-items: center; gap: 10px;
 
 /* Epoch panel */
 .epoch-panel { border: 2px solid var(--gold); }
+.epoch-panel .panel-label { height: auto; min-height: 42px; }
 .epoch-empty { margin: 0; padding: 22px 17px; color: var(--muted); font-size: 12px; }
-.epoch-retention { display: inline-flex; align-items: baseline; gap: 7px; flex-wrap: wrap; font-size: 11px; font-weight: 500; letter-spacing: .02em; }
+.epoch-retention { display: inline-flex; align-items: baseline; justify-content: flex-end; gap: 7px; flex-wrap: wrap; text-align: right; font-size: 11px; font-weight: 500; letter-spacing: .02em; }
 .epoch-retention > span:nth-child(2) { color: var(--muted); }
 
 /* Pool chips */
