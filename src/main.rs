@@ -29,6 +29,7 @@ const TACHYGRAM_BYTES: u64 = 32;
 const MAX_CHART_EPOCHS: u32 = 6;
 const DEFAULT_BLOCK_TARGET_SECONDS: u64 = 75;
 const BLOCK_CADENCE_SAMPLE_LIMIT: usize = 12;
+const DASHBOARD_TACHYGRAM_LIMIT: usize = 42;
 /// How far behind the tip the index may be for a dashboard request to catch it up inline.
 const CATCH_UP_BLOCKS: u32 = 64;
 
@@ -460,6 +461,41 @@ async fn dashboard(
         .map_err(|error| (StatusCode::BAD_GATEWAY, Json(json!({ "error": error }))))
 }
 
+fn dashboard_tachygrams(
+    index: &TachyonIndex,
+    tachyon_info: Option<&TachyonInfo>,
+) -> Vec<TachygramResponse> {
+    let mut tachygrams = tachyon_info.map_or_else(
+        || {
+            index
+                .tachygrams
+                .iter()
+                .map(|(value, revealed_height)| TachygramResponse {
+                    value: value.clone(),
+                    revealed_height: *revealed_height,
+                })
+                .collect::<Vec<_>>()
+        },
+        |info| {
+            info.recent_tachygrams
+                .iter()
+                .map(|tachygram| TachygramResponse {
+                    value: tachygram.tachygram.clone(),
+                    revealed_height: tachygram.revealed_height,
+                })
+                .collect()
+        },
+    );
+    tachygrams.sort_unstable_by(|left, right| {
+        right
+            .revealed_height
+            .cmp(&left.revealed_height)
+            .then_with(|| right.value.cmp(&left.value))
+    });
+    tachygrams.truncate(DASHBOARD_TACHYGRAM_LIMIT);
+    tachygrams
+}
+
 async fn build_dashboard(
     state: &AppState,
     query: DashboardQuery,
@@ -521,27 +557,7 @@ async fn build_dashboard(
         Some(tip) if tip.height == info.blocks => tip.tachyon_pool_zat(),
         _ => state.rpc.block_at(info.blocks).await?.tachyon_pool_zat(),
     };
-    let tachygrams = tachyon_info.as_ref().map_or_else(
-        || {
-            index
-                .tachygrams
-                .iter()
-                .map(|(value, revealed_height)| TachygramResponse {
-                    value: value.clone(),
-                    revealed_height: *revealed_height,
-                })
-                .collect::<Vec<_>>()
-        },
-        |info| {
-            info.recent_tachygrams
-                .iter()
-                .map(|tachygram| TachygramResponse {
-                    value: tachygram.tachygram.clone(),
-                    revealed_height: tachygram.revealed_height,
-                })
-                .collect()
-        },
-    );
+    let tachygrams = dashboard_tachygrams(&index, tachyon_info.as_ref());
     let accumulator = tachyon_info
         .as_ref()
         .map(|info| info.tip_anchor.clone())
@@ -851,6 +867,18 @@ mod tests {
 
         assert!(serialized.get("tx").is_none());
         assert_eq!(serialized["transactions"][0]["txid"], "11");
+    }
+
+    #[test]
+    fn dashboard_tachygram_sample_is_bounded_and_newest_first() {
+        let mut index = TachyonIndex::default();
+        for height in 1..=100u32 {
+            index.tachygrams.insert(format!("{height:064x}"), height);
+        }
+        let sample = dashboard_tachygrams(&index, None);
+        assert_eq!(sample.len(), DASHBOARD_TACHYGRAM_LIMIT);
+        assert_eq!(sample[0].revealed_height, 100);
+        assert_eq!(sample[41].revealed_height, 59);
     }
 
     #[tokio::test]
