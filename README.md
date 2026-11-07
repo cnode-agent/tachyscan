@@ -24,8 +24,9 @@ ZAKURA_RPC_URL=http://127.0.0.1:8232 \
 
 Open <http://127.0.0.1:4141>. Tachyscan prefers the node's authoritative accumulator when `gettachyoninfo` is available. It also maintains `.tachyscan/index.json` from canonical verbose blocks as a fallback for nodes without PR #983. Recent transactions are usable while that backfill runs.
 
-The Pool info page contains the epoch ring and pruning countdown, tachygram activity,
-retained tachygrams, and the footprint chart. The explorer keeps its transaction stream,
+The Pool info page contains the epoch ring and pruning countdown, the aggregate retained
+tachygram count, current non-pruned payload size, and payload history chart. Individual
+tachygrams are not listed in the front-end; the explorer keeps its transaction stream,
 pixel-art pool chips, search, and proof/pointer stamp summaries.
 
 The navigation bar links **Explorer** (`/`), **Pool info** (`/pool-info`), **Faucet** (`/faucet`), and
