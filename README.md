@@ -32,7 +32,7 @@ pixel-art pool chips, search, and proof/pointer stamp summaries.
 The navigation bar links **Explorer** (`/`), **Pool info** (`/pool-info`), **Faucet** (`/faucet`), and
 **Tutorial** (`/tutorial`). Faucet connects to the separate `tachyon-faucet`
 service; Tutorial links to the Tachyon guide in the
-[zcash-devtool README](https://github.com/S1nus/zcash-devtool/tree/c/tachyon-zakura#readme).
+[zcash-devtool README](https://github.com/cnode-agent/zcash-devtool/tree/c/mock-wire+proof-cache#readme).
 Both pages can open independently of
 the explorer's node connection. The explorer keeps
 the transaction type key above its stream; block and transaction detail pages

@@ -164,7 +164,7 @@ describe('site navigation', () => {
     await mount(<App />);
     expect(host.querySelector('[role="alert"]')?.textContent).toContain('Node offline');
     await click('/tutorial');
-    expect(link('https://github.com/S1nus/zcash-devtool/tree/c/tachyon-zakura#readme').textContent).toContain('Read the guide on GitHub');
+    expect(link('https://github.com/cnode-agent/zcash-devtool/tree/c/mock-wire+proof-cache#readme').textContent).toContain('Read the guide on GitHub');
     expect(host.querySelector('[role="alert"]')).toBeNull();
   });
 });
