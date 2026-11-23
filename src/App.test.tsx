@@ -70,7 +70,7 @@ async function click(path: string) {
 }
 
 describe('site navigation', () => {
-  it('moves between all four pages and restores Explorer for detail routes', async () => {
+  it('moves between all five pages and restores Explorer for detail routes', async () => {
     await mount(<App />);
     const current = () => host.querySelector('nav[aria-label="Main navigation"] [aria-current="page"]')?.textContent;
     expect(current()).toBe('Explorer');
@@ -97,6 +97,11 @@ describe('site navigation', () => {
     await click('/tutorial');
     expect(current()).toBe('Tutorial');
     expect(document.title).toBe('Tutorial · Tachyscan');
+
+    await click('/proof-tree');
+    await vi.waitFor(() => expect(host.querySelector('#proof-heading')).not.toBeNull());
+    expect(current()).toBe('Proof tree');
+    expect(document.title).toBe('Proof tree · Tachyscan');
 
     // Back/Forward must restore the page and the active navigation item together.
     await act(async () => {
@@ -150,11 +155,11 @@ describe('site navigation', () => {
     }
   });
 
-  it.each(['/faucet', '/faucet/', '/tutorial', '/tutorial/'])('opens %s without waiting for RPC', async (path) => {
+  it.each(['/faucet', '/faucet/', '/tutorial', '/tutorial/', '/proof-tree', '/proof-tree/'])('opens %s without waiting for RPC', async (path) => {
     window.history.replaceState(null, '', path);
     fetchMock.mockRejectedValue(new Error('Node offline'));
     await mount(<App />);
-    expect(host.textContent).toContain(path.startsWith('/faucet') ? 'YOUR IP COOLDOWN' : 'TACHYON ALPHA TESTNET');
+    expect(host.textContent).toContain(path.startsWith('/faucet') ? 'YOUR IP COOLDOWN' : path.startsWith('/proof-tree') ? 'Tachyon proof tree' : 'TACHYON ALPHA TESTNET');
     expect(fetchMock.mock.calls.some(([url]) => url.startsWith('/api/dashboard'))).toBe(false);
     expect(host.querySelector('nav[aria-label="Main navigation"] [aria-current="page"]')?.getAttribute('href')).toBe(path.replace(/\/$/, ''));
   });

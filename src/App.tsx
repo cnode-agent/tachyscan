@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
+import { lazy, Suspense } from 'preact/compat';
 import type { Dashboard, ExplorerBlock, Transaction, TransactionSelection } from './types';
 import { isTransactionId, transactionPath } from './transaction-route';
 import { blockPath, useExplorerRoute } from './explorer-route';
@@ -14,12 +15,15 @@ import { PoolMark } from './PoolMark';
 import { FaucetPage } from './FaucetPage';
 import { POOL_TYPES, durationUntil, epochProgress, formatBytes, formatZec, shortHash, transactionPools } from './lib';
 
+const ProofTreePage = lazy(() => import('./ProofTreePage').then((module) => ({ default: module.ProofTreePage })));
+
 const PAGE_SIZE = 8;
 const SITE_PAGES = [
   { id: 'explorer', label: 'Explorer', href: '/' },
   { id: 'pool-info', label: 'Pool info', href: '/pool-info' },
   { id: 'faucet', label: 'Faucet', href: '/faucet' },
   { id: 'tutorial', label: 'Tutorial', href: '/tutorial' },
+  { id: 'proof-tree', label: 'Proof tree', href: '/proof-tree' },
 ] as const;
 
 function useClock() {
@@ -142,7 +146,9 @@ export function App() {
         ))}
       </nav>
       <main class="page-content">
-        {section === 'faucet' ? (
+        {section === 'proof-tree' ? (
+          <Suspense fallback={<p role="status">Loading proof tree…</p>}><ProofTreePage /></Suspense>
+        ) : section === 'faucet' ? (
           <FaucetPage onNavigate={navigate} />
         ) : section === 'tutorial' ? (
           <TutorialPage />

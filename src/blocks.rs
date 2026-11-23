@@ -257,6 +257,8 @@ mod tests {
             "/tutorial/",
             "/pool-info",
             "/pool-info/",
+            "/proof-tree",
+            "/proof-tree/",
         ] {
             let response = client.get(format!("{url}{path}")).send().await.unwrap();
             assert_eq!(response.status(), StatusCode::OK);

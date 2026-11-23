@@ -30,13 +30,13 @@ tachygrams are not listed in the front-end; the explorer keeps its transaction s
 pixel-art pool chips, search, and proof/pointer stamp summaries.
 
 The navigation bar links **Explorer** (`/`), **Pool info** (`/pool-info`), **Faucet** (`/faucet`), and
-**Tutorial** (`/tutorial`). Faucet connects to the separate `tachyon-faucet`
+**Tutorial** (`/tutorial`), and **Proof tree** (`/proof-tree`). Faucet connects to the separate `tachyon-faucet`
 service; Tutorial links to the Tachyon guide in the
 [zcash-devtool README](https://github.com/cnode-agent/zcash-devtool/tree/c/storage-prune#readme).
 Both pages can open independently of
 the explorer's node connection. The explorer keeps
 the transaction type key above its stream; block and transaction detail pages
-remain under Explorer. Forward `/pool-info`, `/faucet`, and `/tutorial` to Tachyscan as well,
+remain under Explorer. Forward `/pool-info`, `/faucet`, `/tutorial`, and `/proof-tree` to Tachyscan as well,
 or configure an `index.html` fallback if serving `dist/` separately.
 
 Click a transaction to open `/tx/<full-64-character-txid>`.
@@ -98,3 +98,38 @@ belong in the frontend. Without the service, claiming stays disabled.
 | `TACHYSCAN_DATA_DIR` | `.tachyscan` | Persistent accumulator index |
 | `TACHYSCAN_EPOCH_LENGTH` | `4096` | Override only for a Tachyon build using `test-epoch-size` |
 | `RUST_LOG` | `tachyscan_server=info` | Backend logging filter |
+
+## Proof tree
+
+The **Proof tree** page is a zoomable, pannable map of Tachyon's proof steps.
+Rectangles are steps; rounded nodes are PCD header types. Fields are black,
+polynomials are red, and arrows distinguish left/right children from additional
+witnesses. Select a node to inspect its contract and jump to the pinned Rust
+source. Use the focused views or **Complete map**, **Find a step**, and **Fit**.
+Touch supports drag and pinch; the focused canvas supports arrow keys, `+`, `-`,
+and `0` (fit). The page works without a node connection.
+
+The diagram currently documents Tachyon
+[`fc47e94`](https://github.com/tachyon-zcash/tachyon/tree/fc47e94846ee6f9f3f30a32f884b098e51e30620),
+not necessarily the revision used by the explorer's backend or connected node.
+It is a type dependency map: repeated header nodes and loops stand for distinct
+proof instances, not a cyclic proof. It is not a replacement for the circuit or
+consensus rules.
+
+To update the diagram, change `REVISION` in `scripts/extract-proof-tree.py` to a
+commit present in a local Tachyon clone, then run:
+
+```sh
+python3 scripts/extract-proof-tree.py ../tachyon
+npm run proof-tree:render
+npm test
+npm run build
+```
+
+The extractor reads the pinned Git objects and checks registration indices,
+child/output header names, witnesses, and exact polynomial slots. Review
+`src/proof-tree/notes.json` and `views.json` against that revision when updating.
+Commit the generated contracts and SVGs. Graphviz is a development-only dependency;
+normal builds use checked-in SVGs, and no layout engine or WASM is sent to browsers.
+The page loads in its own frontend chunk. The Rust server serves `/proof-tree`
+and `/proof-tree/` directly; rebuild/restart the server when deploying this route.

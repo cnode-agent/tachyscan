@@ -49,7 +49,7 @@ h1 span { color: #d96c00; } h1 i { font-size: .25em; vertical-align: top; margin
 .stat strong { color: var(--orange); font-size: 20px; font-weight: 550; }
 .stat-rule { width: 1px; background: var(--line); margin: 0 28px; }
 .brand-link { text-decoration: none; }
-.site-navigation { display: flex; gap: 8px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.site-navigation { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
 .site-navigation a { position: relative; padding: 16px 28px; color: var(--muted); text-decoration: none; font-size: 13px; letter-spacing: .06em; transition: color .15s, background .15s; }
 .site-navigation a:hover { color: var(--teal); background: rgba(98,197,193,.045); }
 .site-navigation a[aria-current="page"] { color: var(--gold); background: linear-gradient(0deg, rgba(229,185,26,.08), transparent); }

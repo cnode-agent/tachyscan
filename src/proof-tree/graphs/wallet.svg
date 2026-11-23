@@ -1,0 +1,495 @@
+<svg role="group" aria-label="Proof types and their dependencies"
+ viewBox="0.00 0.00 2809.00 878.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 852.71)">
+<!-- NoteNullifiers&#45;&gt;SpendableInit -->
+<g id="edge9" class="edge">
+<title>NoteNullifiers&#45;&gt;SpendableInit</title>
+<path fill="none" stroke="#44413b" d="M1015.58,-356.79C1074.49,-381.58 1146.3,-411.81 1194.97,-432.29"/>
+<polygon fill="#44413b" stroke="#44413b" points="1193.78,-434.45 1201.18,-434.91 1195.68,-429.93 1193.78,-434.45"/>
+<text xml:space="preserve" text-anchor="middle" x="1182.59" y="-432.95" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteNullifiers&#45;&gt;NullifierFuse -->
+<g id="edge32" class="edge">
+<title>NoteNullifiers&#45;&gt;NullifierFuse</title>
+<path fill="none" stroke="#44413b" d="M812.13,-358.11C789.74,-368.88 766.3,-380.77 744.99,-392.8 714.82,-409.82 710.42,-419.25 679.99,-435.8 672.21,-440.03 663.84,-444.15 655.52,-448"/>
+<polygon fill="#44413b" stroke="#44413b" points="654.64,-445.71 649.28,-450.83 656.67,-450.17 654.64,-445.71"/>
+<text xml:space="preserve" text-anchor="middle" x="660.91" y="-432.97" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteNullifiers&#45;&gt;NullifierFuse -->
+<g id="edge33" class="edge">
+<title>NoteNullifiers&#45;&gt;NullifierFuse</title>
+<path fill="none" stroke="#44413b" d="M847.93,-370.17C816.44,-387.71 778.14,-406.09 744.99,-424.8 714.82,-441.82 710.42,-451.25 679.99,-467.8 674.3,-470.9 668.28,-473.93 662.2,-476.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="661.31,-474.43 655.87,-479.48 663.27,-478.92 661.31,-474.43"/>
+<text xml:space="preserve" text-anchor="middle" x="667.71" y="-461.78" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- NoteSecret&#45;&gt;NullifierDerive -->
+<g id="edge5" class="edge">
+<title>NoteSecret&#45;&gt;NullifierDerive</title>
+<path fill="none" stroke="#44413b" d="M415.26,-214.3C443.18,-234.47 479.14,-259 513.08,-277.8 520.71,-282.03 528.94,-286.13 537.15,-289.96"/>
+<polygon fill="#44413b" stroke="#44413b" points="535.89,-292.08 543.28,-292.76 537.93,-287.62 535.89,-292.08"/>
+<text xml:space="preserve" text-anchor="middle" x="524.66" y="-290.24" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteSecret&#45;&gt;SpendBind -->
+<g id="edge25" class="edge">
+<title>NoteSecret&#45;&gt;SpendBind</title>
+<path fill="none" stroke="#44413b" d="M446.81,-166.63C553.32,-154.2 746.06,-134.8 911.44,-134.8 911.44,-134.8 911.44,-134.8 1252.82,-134.8 1311.68,-134.8 1653.48,-354.2 1768.44,-429.09"/>
+<polygon fill="#44413b" stroke="#44413b" points="1766.89,-431.01 1774.09,-432.78 1769.57,-426.9 1766.89,-431.01"/>
+<text xml:space="preserve" text-anchor="middle" x="1755.56" y="-427.48" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- NoteSpendable&#45;&gt;SpendableLift -->
+<g id="edge13" class="edge">
+<title>NoteSpendable&#45;&gt;SpendableLift</title>
+<path fill="none" stroke="#44413b" d="M1447.7,-563.63C1406.13,-574.27 1359.76,-584.73 1322.68,-591.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="1322.36,-589.28 1315.92,-592.96 1323.25,-594.09 1322.36,-589.28"/>
+<text xml:space="preserve" text-anchor="middle" x="1330.72" y="-578.33" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteSpendable&#45;&gt;SpendBind -->
+<g id="edge24" class="edge">
+<title>NoteSpendable&#45;&gt;SpendBind</title>
+<path fill="none" stroke="#44413b" d="M1670.17,-493.72C1696.49,-485.99 1723.52,-478.06 1746.48,-471.32"/>
+<polygon fill="#44413b" stroke="#44413b" points="1746.94,-473.74 1752.97,-469.41 1745.56,-469.03 1746.94,-473.74"/>
+<text xml:space="preserve" text-anchor="middle" x="1739.41" y="-478.9" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteUnspent&#45;&gt;SpendableLift -->
+<g id="edge14" class="edge">
+<title>NoteUnspent&#45;&gt;SpendableLift</title>
+<path fill="none" stroke="#44413b" d="M1026.25,-697.64C1084.02,-671.96 1151.64,-641.9 1197.47,-621.52"/>
+<polygon fill="#44413b" stroke="#44413b" points="1198.42,-623.78 1203.82,-618.7 1196.43,-619.3 1198.42,-623.78"/>
+<text xml:space="preserve" text-anchor="middle" x="1192.07" y="-629.87" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- NoteUnspent&#45;&gt;QrSpendableInit -->
+<g id="edge36" class="edge">
+<title>NoteUnspent&#45;&gt;QrSpendableInit</title>
+<path fill="none" stroke="#44413b" d="M1021.99,-694.95C1042.33,-682.59 1062.61,-668.41 1079.89,-652.8 1116.78,-619.49 1104.87,-591.28 1144.89,-561.8 1153.34,-555.58 1162.96,-550.42 1172.88,-546.15"/>
+<polygon fill="#44413b" stroke="#44413b" points="1173.53,-548.53 1179.1,-543.63 1171.69,-543.99 1173.53,-548.53"/>
+<text xml:space="preserve" text-anchor="middle" x="1166.87" y="-554.41" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- OutputHeader&#45;&gt;OutputAction -->
+<g id="edge20" class="edge">
+<title>OutputHeader&#45;&gt;OutputAction</title>
+<path fill="none" stroke="#44413b" d="M2136.71,-681.61C2180.29,-674.51 2231.21,-666.21 2270.94,-659.74"/>
+<polygon fill="#44413b" stroke="#44413b" points="2271.23,-662.17 2277.75,-658.63 2270.44,-657.34 2271.23,-662.17"/>
+<text xml:space="preserve" text-anchor="middle" x="2262.71" y="-666.34" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- QrBucket&#45;&gt;QrSpendableInit -->
+<g id="edge37" class="edge">
+<title>QrBucket&#45;&gt;QrSpendableInit</title>
+<path fill="none" stroke="#44413b" d="M1077.68,-542.2C1110.63,-539.27 1143.8,-536.32 1172.17,-533.79"/>
+<polygon fill="#44413b" stroke="#44413b" points="1172.16,-536.25 1178.92,-533.19 1171.73,-531.37 1172.16,-536.25"/>
+<text xml:space="preserve" text-anchor="middle" x="1163.12" y="-539.78" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- SpendHeader&#45;&gt;SpendAction -->
+<g id="edge28" class="edge">
+<title>SpendHeader&#45;&gt;SpendAction</title>
+<path fill="none" stroke="#44413b" d="M2157.81,-440.99C2196.42,-436.67 2238.21,-431.99 2271.83,-428.22"/>
+<polygon fill="#44413b" stroke="#44413b" points="2272,-430.67 2278.69,-427.45 2271.46,-425.8 2272,-430.67"/>
+<text xml:space="preserve" text-anchor="middle" x="2263.12" y="-434.4" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteSeed&#45;&gt;NoteSecret -->
+<g id="edge3" class="edge">
+<title>NoteSeed&#45;&gt;NoteSecret</title>
+<path fill="none" stroke="#44413b" d="M216.75,-176.8C233.56,-176.8 253.01,-176.8 272.15,-176.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="272.1,-179.25 279.1,-176.8 272.1,-174.35 272.1,-179.25"/>
+</g>
+<!-- NoteSeed&#45;L&#45;&gt;NoteSeed -->
+<g id="edge1" class="edge">
+<title>NoteSeed&#45;L&#45;&gt;NoteSeed</title>
+<path fill="none" stroke="#44413b" d="M53.73,-204.48C69.69,-200.57 90.83,-195.38 110.49,-190.56"/>
+<polygon fill="#44413b" stroke="#44413b" points="110.83,-192.99 117.05,-188.95 109.67,-188.24 110.83,-192.99"/>
+<text xml:space="preserve" text-anchor="middle" x="115.46" y="-178.69" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteSeed&#45;R&#45;&gt;NoteSeed -->
+<g id="edge2" class="edge">
+<title>NoteSeed&#45;R&#45;&gt;NoteSeed</title>
+<path fill="none" stroke="#44413b" d="M53.73,-149.12C69.69,-153.03 90.83,-158.22 110.49,-163.04"/>
+<polygon fill="#44413b" stroke="#44413b" points="109.67,-165.36 117.05,-164.65 110.83,-160.61 109.67,-165.36"/>
+<text xml:space="preserve" text-anchor="middle" x="114.55" y="-155.11" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;NoteSeed&#45;&gt;NoteSeed -->
+<g id="edge4" class="edge">
+<title>w&#45;NoteSeed&#45;&gt;NoteSeed</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M167.54,-125.59C167.54,-133.13 167.54,-140.67 167.54,-148.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="165.09,-147.88 167.54,-154.88 169.99,-147.88 165.09,-147.88"/>
+</g>
+<!-- NullifierDerive&#45;&gt;NoteNullifiers -->
+<g id="edge7" class="edge">
+<title>NullifierDerive&#45;&gt;NoteNullifiers</title>
+<path fill="none" stroke="#44413b" d="M659.93,-313.8C690.01,-313.8 727.49,-313.8 764.25,-313.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="764.06,-316.25 771.06,-313.8 764.06,-311.35 764.06,-316.25"/>
+</g>
+<!-- NullifierDerive&#45;R&#45;&gt;NullifierDerive -->
+<g id="edge6" class="edge">
+<title>NullifierDerive&#45;R&#45;&gt;NullifierDerive</title>
+<path fill="none" stroke="#44413b" d="M391.51,-313.8C423.69,-313.8 479.84,-313.8 525.1,-313.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="524.9,-316.25 531.9,-313.8 524.9,-311.35 524.9,-316.25"/>
+<text xml:space="preserve" text-anchor="middle" x="529.44" y="-303.9" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;NullifierDerive&#45;&gt;NullifierDerive -->
+<g id="edge8" class="edge">
+<title>w&#45;NullifierDerive&#45;&gt;NullifierDerive</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M596.53,-261.9C596.53,-269.64 596.53,-277.38 596.53,-285.13"/>
+<polygon fill="#44413b" stroke="#44413b" points="594.08,-285.01 596.53,-292.01 598.98,-285.01 594.08,-285.01"/>
+</g>
+<!-- SpendableInit&#45;&gt;NoteSpendable -->
+<g id="edge11" class="edge">
+<title>SpendableInit&#45;&gt;NoteSpendable</title>
+<path fill="none" stroke="#44413b" d="M1314.43,-470.25C1347.4,-477.99 1389.27,-487.81 1428.82,-497.09"/>
+<polygon fill="#44413b" stroke="#44413b" points="1427.85,-499.38 1435.23,-498.59 1428.97,-494.61 1427.85,-499.38"/>
+</g>
+<!-- SpendableInit&#45;R&#45;&gt;SpendableInit -->
+<g id="edge10" class="edge">
+<title>SpendableInit&#45;R&#45;&gt;SpendableInit</title>
+<path fill="none" stroke="#44413b" d="M939.35,-429.03C990.57,-433.43 1106.27,-443.38 1181.33,-449.83"/>
+<polygon fill="#44413b" stroke="#44413b" points="1180.68,-452.23 1187.86,-450.39 1181.1,-447.35 1180.68,-452.23"/>
+<text xml:space="preserve" text-anchor="middle" x="1185.4" y="-453.82" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;SpendableInit&#45;&gt;SpendableInit -->
+<g id="edge12" class="edge">
+<title>w&#45;SpendableInit&#45;&gt;SpendableInit</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1251.82,-359.62C1251.82,-382.15 1251.82,-404.68 1251.82,-427.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="1249.37,-427 1251.82,-434 1254.27,-427 1249.37,-427"/>
+</g>
+<!-- SpendableLift&#45;&gt;NoteSpendable -->
+<g id="edge15" class="edge">
+<title>SpendableLift&#45;&gt;NoteSpendable</title>
+<path fill="none" stroke="#44413b" d="M1301.11,-577.4C1333.49,-567.57 1377.84,-556.21 1420.46,-546.54"/>
+<polygon fill="#44413b" stroke="#44413b" points="1420.9,-548.95 1427.19,-545.02 1419.83,-544.17 1420.9,-548.95"/>
+</g>
+<!-- OutputBind&#45;&gt;OutputHeader -->
+<g id="edge18" class="edge">
+<title>OutputBind&#45;&gt;OutputHeader</title>
+<path fill="none" stroke="#44413b" d="M1860.82,-696.8C1882.77,-696.8 1909.11,-696.8 1934.8,-696.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="1934.59,-699.25 1941.59,-696.8 1934.59,-694.35 1934.59,-699.25"/>
+</g>
+<!-- OutputBind&#45;L&#45;&gt;OutputBind -->
+<g id="edge16" class="edge">
+<title>OutputBind&#45;L&#45;&gt;OutputBind</title>
+<path fill="none" stroke="#44413b" d="M1583.14,-727.29C1621.19,-722.09 1693.64,-712.18 1745.65,-705.07"/>
+<polygon fill="#44413b" stroke="#44413b" points="1745.71,-707.54 1752.31,-704.16 1745.04,-702.68 1745.71,-707.54"/>
+<text xml:space="preserve" text-anchor="middle" x="1750.75" y="-694.06" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- OutputBind&#45;R&#45;&gt;OutputBind -->
+<g id="edge17" class="edge">
+<title>OutputBind&#45;R&#45;&gt;OutputBind</title>
+<path fill="none" stroke="#44413b" d="M1583.14,-666.31C1621.19,-671.51 1693.64,-681.42 1745.65,-688.53"/>
+<polygon fill="#44413b" stroke="#44413b" points="1745.04,-690.92 1752.31,-689.44 1745.71,-686.06 1745.04,-690.92"/>
+<text xml:space="preserve" text-anchor="middle" x="1749.84" y="-679.74" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;OutputBind&#45;&gt;OutputBind -->
+<g id="edge19" class="edge">
+<title>w&#45;OutputBind&#45;&gt;OutputBind</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1807.16,-606.85C1807.16,-627.23 1807.16,-647.62 1807.16,-668"/>
+<polygon fill="#44413b" stroke="#44413b" points="1804.71,-667.91 1807.16,-674.91 1809.61,-667.91 1804.71,-667.91"/>
+</g>
+<!-- OutputAction&#45;&gt;Actions -->
+<g id="edge22" class="edge">
+<title>OutputAction&#45;&gt;Actions</title>
+<path fill="none" stroke="#44413b" d="M2398.89,-631.93C2416.49,-626.52 2435.74,-620.26 2453.2,-613.8 2478.42,-604.47 2505.19,-593.5 2530.23,-582.75"/>
+<polygon fill="#44413b" stroke="#44413b" points="2531.09,-585.04 2536.55,-580.02 2529.15,-580.54 2531.09,-585.04"/>
+</g>
+<!-- OutputAction&#45;R&#45;&gt;OutputAction -->
+<g id="edge21" class="edge">
+<title>OutputAction&#45;R&#45;&gt;OutputAction</title>
+<path fill="none" stroke="#44413b" d="M2069.4,-605.02C2114.16,-612.31 2207.36,-627.5 2271.31,-637.92"/>
+<polygon fill="#44413b" stroke="#44413b" points="2270.55,-640.28 2277.85,-638.99 2271.34,-635.45 2270.55,-640.28"/>
+<text xml:space="preserve" text-anchor="middle" x="2275.38" y="-629.33" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;OutputAction&#45;&gt;OutputAction -->
+<g id="edge23" class="edge">
+<title>w&#45;OutputAction&#45;&gt;OutputAction</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M2339.05,-597.59C2339.05,-605.13 2339.05,-612.67 2339.05,-620.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="2336.6,-619.88 2339.05,-626.88 2341.5,-619.88 2336.6,-619.88"/>
+</g>
+<!-- SpendBind&#45;&gt;SpendHeader -->
+<g id="edge26" class="edge">
+<title>SpendBind&#45;&gt;SpendHeader</title>
+<path fill="none" stroke="#44413b" d="M1859.95,-453.8C1876.75,-453.8 1896.18,-453.8 1915.96,-453.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="1915.93,-456.25 1922.93,-453.8 1915.93,-451.35 1915.93,-456.25"/>
+</g>
+<!-- w&#45;SpendBind&#45;&gt;SpendBind -->
+<g id="edge27" class="edge">
+<title>w&#45;SpendBind&#45;&gt;SpendBind</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1807.16,-401.96C1807.16,-409.69 1807.16,-417.42 1807.16,-425.16"/>
+<polygon fill="#44413b" stroke="#44413b" points="1804.71,-425.03 1807.16,-432.03 1809.61,-425.04 1804.71,-425.03"/>
+</g>
+<!-- SpendAction&#45;&gt;Actions -->
+<g id="edge30" class="edge">
+<title>SpendAction&#45;&gt;Actions</title>
+<path fill="none" stroke="#44413b" d="M2398.02,-437.41C2415.85,-442.87 2435.46,-449.24 2453.2,-455.8 2478.42,-465.13 2505.19,-476.1 2530.23,-486.85"/>
+<polygon fill="#44413b" stroke="#44413b" points="2529.15,-489.06 2536.55,-489.58 2531.09,-484.56 2529.15,-489.06"/>
+</g>
+<!-- SpendAction&#45;R&#45;&gt;SpendAction -->
+<g id="edge29" class="edge">
+<title>SpendAction&#45;R&#45;&gt;SpendAction</title>
+<path fill="none" stroke="#44413b" d="M2069.4,-347.83C2114.36,-360.04 2208.2,-385.53 2272.17,-402.91"/>
+<polygon fill="#44413b" stroke="#44413b" points="2271.35,-405.22 2278.75,-404.69 2272.64,-400.5 2271.35,-405.22"/>
+<text xml:space="preserve" text-anchor="middle" x="2276.24" y="-395.19" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;SpendAction&#45;&gt;SpendAction -->
+<g id="edge31" class="edge">
+<title>w&#45;SpendAction&#45;&gt;SpendAction</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M2339.05,-369.59C2339.05,-377.13 2339.05,-384.67 2339.05,-392.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="2336.6,-391.88 2339.05,-398.88 2341.5,-391.88 2336.6,-391.88"/>
+</g>
+<!-- NullifierFuse&#45;&gt;NoteNullifiers -->
+<g id="edge34" class="edge">
+<title>NullifierFuse&#45;&gt;NoteNullifiers</title>
+<path fill="none" stroke="#44413b" d="M604.57,-451.57C619.05,-431.76 653.09,-418.43 679.99,-403.8 710.42,-387.25 714.82,-377.82 744.99,-360.8 755.29,-354.99 766.08,-349.21 777.02,-343.67"/>
+<polygon fill="#44413b" stroke="#44413b" points="778.09,-345.87 783.25,-340.55 775.89,-341.49 778.09,-345.87"/>
+</g>
+<!-- w&#45;NullifierFuse&#45;&gt;NullifierFuse -->
+<g id="edge35" class="edge">
+<title>w&#45;NullifierFuse&#45;&gt;NullifierFuse</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M596.53,-419.96C596.53,-427.69 596.53,-435.42 596.53,-443.16"/>
+<polygon fill="#44413b" stroke="#44413b" points="594.08,-443.03 596.53,-450.03 598.98,-443.04 594.08,-443.03"/>
+</g>
+<!-- QrSpendableInit&#45;&gt;NoteSpendable -->
+<g id="edge38" class="edge">
+<title>QrSpendableInit&#45;&gt;NoteSpendable</title>
+<path fill="none" stroke="#44413b" d="M1323.02,-526.8C1350.43,-526.8 1382.88,-526.8 1414.7,-526.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="1414.7,-529.25 1421.7,-526.8 1414.7,-524.35 1414.7,-529.25"/>
+</g>
+<!-- Actions -->
+<g id="node-Actions" class="node" data-node="Actions" role="button" tabindex="0" aria-label="Inspect Actions">
+<title>Actions</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="2636.59" cy="-534.8" rx="118.39" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="2608.71" y="-565.1" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">Actions</text>
+<text xml:space="preserve" text-anchor="start" x="2616.71" y="-540.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor</text>
+<text xml:space="preserve" text-anchor="start" x="2583.84" y="-516.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="2569.39" y="-493.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- NoteNullifiers -->
+<g id="node-NoteNullifiers" class="node" data-node="NoteNullifiers" role="button" tabindex="0" aria-label="Inspect NoteNullifiers">
+<title>NoteNullifiers</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="912.44" cy="-313.8" rx="139.36" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="861.9" y="-332.3" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteNullifiers</text>
+<text xml:space="preserve" text-anchor="start" x="830.42" y="-307.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, epoch_start, epoch_end</text>
+<text xml:space="preserve" text-anchor="start" x="869.45" y="-283.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: NfSeqPoly</text>
+</g>
+<!-- NoteSecret -->
+<g id="node-NoteSecret" class="node" data-node="NoteSecret" role="button" tabindex="0" aria-label="Inspect NoteSecret">
+<title>NoteSecret</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="364.58" cy="-176.8" rx="83.5" ry="46.33"/>
+<text xml:space="preserve" text-anchor="start" x="322.06" y="-183.5" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteSecret</text>
+<text xml:space="preserve" text-anchor="start" x="327.38" y="-158.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, note, mk</text>
+</g>
+<!-- NoteSpendable -->
+<g id="node-NoteSpendable" class="node" data-node="NoteSpendable" role="button" tabindex="0" aria-label="Inspect NoteSpendable">
+<title>NoteSpendable</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="1556.46" cy="-526.8" rx="132.71" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="1497.86" y="-545.3" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteSpendable</text>
+<text xml:space="preserve" text-anchor="start" x="1479.15" y="-520.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, epoch_current, anchor</text>
+<text xml:space="preserve" text-anchor="start" x="1489.27" y="-496.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- NoteUnspent -->
+<g id="node-NoteUnspent" class="node" data-node="NoteUnspent" role="button" tabindex="0" aria-label="Inspect NoteUnspent">
+<title>NoteUnspent</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="912.44" cy="-747.8" rx="144.96" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="862.83" y="-778.1" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteUnspent</text>
+<text xml:space="preserve" text-anchor="start" x="826.45" y="-753.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, anchor_start, epoch_start</text>
+<text xml:space="preserve" text-anchor="start" x="839.44" y="-729.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch_next, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="869.45" y="-706.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: NfSeqPoly</text>
+</g>
+<!-- OutputHeader -->
+<g id="node-OutputHeader" class="node" data-node="OutputHeader" role="button" tabindex="0" aria-label="Inspect OutputHeader">
+<title>OutputHeader</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="2042.52" cy="-696.8" rx="98.87" ry="46.33"/>
+<text xml:space="preserve" text-anchor="start" x="1989.12" y="-703.5" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">OutputHeader</text>
+<text xml:space="preserve" text-anchor="start" x="2009.29" y="-678.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, pad, cv</text>
+</g>
+<!-- QrBucket -->
+<g id="node-QrBucket" class="node" data-node="QrBucket" role="button" tabindex="0" aria-label="Inspect QrBucket">
+<title>QrBucket</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="912.44" cy="-556.8" rx="167.45" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="877.01" y="-587.1" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">QrBucket</text>
+<text xml:space="preserve" text-anchor="start" x="815.6" y="-562.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch, anchor_start, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="810.55" y="-538.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">discriminant, profile, contents_hash</text>
+<text xml:space="preserve" text-anchor="start" x="845.25" y="-515.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- SpendHeader -->
+<g id="node-SpendHeader" class="node" data-node="SpendHeader" role="button" tabindex="0" aria-label="Inspect SpendHeader">
+<title>SpendHeader</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="2042.52" cy="-453.8" rx="117.37" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="1990.06" y="-472.3" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">SpendHeader</text>
+<text xml:space="preserve" text-anchor="start" x="1976.04" y="-447.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, nf_current, nf_next</text>
+<text xml:space="preserve" text-anchor="start" x="2002.06" y="-423.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor, pk, cv</text>
+</g>
+<!-- NoteSeed -->
+<g id="node-NoteSeed" class="node" data-node="NoteSeed" role="button" tabindex="0" aria-label="Inspect NoteSeed">
+<title>NoteSeed</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="216.08,-196.48 119,-196.48 119,-157.12 216.08,-157.12 216.08,-196.48"/>
+<text xml:space="preserve" text-anchor="middle" x="167.54" y="-172" font-family="Helvetica,sans-Serif" font-size="16.00">NoteSeed</text>
+</g>
+<!-- NoteSeed&#45;L -->
+<g id="node10" class="node">
+<title>NoteSeed&#45;L</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="54,-228.8 0,-228.8 0,-192.8 54,-192.8 54,-228.8"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-205.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- NoteSeed&#45;R -->
+<g id="node11" class="node">
+<title>NoteSeed&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="54,-160.8 0,-160.8 0,-124.8 54,-124.8 54,-160.8"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-137.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;NoteSeed -->
+<g id="node12" class="node">
+<title>w&#45;NoteSeed</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="198.88,-125.6 136.2,-125.6 136.2,0 198.88,0 198.88,-125.6"/>
+<text xml:space="preserve" text-anchor="start" x="149.2" y="-106.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="152" y="-83.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">value</text>
+<text xml:space="preserve" text-anchor="start" x="159.23" y="-60.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">psi</text>
+<text xml:space="preserve" text-anchor="start" x="156.71" y="-36.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">rcm</text>
+<text xml:space="preserve" text-anchor="start" x="157.06" y="-12.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">pak</text>
+</g>
+<!-- NullifierDerive -->
+<g id="node-NullifierDerive" class="node" data-node="NullifierDerive" role="button" tabindex="0" aria-label="Inspect NullifierDerive">
+<title>NullifierDerive</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="659.28,-333.48 533.78,-333.48 533.78,-294.12 659.28,-294.12 659.28,-333.48"/>
+<text xml:space="preserve" text-anchor="middle" x="596.53" y="-309" font-family="Helvetica,sans-Serif" font-size="16.00">NullifierDerive</text>
+</g>
+<!-- NullifierDerive&#45;R -->
+<g id="node14" class="node">
+<title>NullifierDerive&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="391.58,-331.8 337.58,-331.8 337.58,-295.8 391.58,-295.8 391.58,-331.8"/>
+<text xml:space="preserve" text-anchor="middle" x="364.58" y="-308.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;NullifierDerive -->
+<g id="node15" class="node">
+<title>w&#45;NullifierDerive</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="654.33,-262 538.73,-262 538.73,-183.6 654.33,-183.6 654.33,-262"/>
+<text xml:space="preserve" text-anchor="start" x="578.19" y="-243.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="562.57" y="-220.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch_start</text>
+<text xml:space="preserve" text-anchor="start" x="551.73" y="-196.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">seq: NfSeqPoly</text>
+</g>
+<!-- SpendableInit -->
+<g id="node-SpendableInit" class="node" data-node="SpendableInit" role="button" tabindex="0" aria-label="Inspect SpendableInit">
+<title>SpendableInit</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1313.71,-475.48 1189.93,-475.48 1189.93,-436.12 1313.71,-436.12 1313.71,-475.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1251.82" y="-451" font-family="Helvetica,sans-Serif" font-size="16.00">SpendableInit</text>
+</g>
+<!-- SpendableInit&#45;R -->
+<g id="node17" class="node">
+<title>SpendableInit&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="939.44,-444.8 885.44,-444.8 885.44,-408.8 939.44,-408.8 939.44,-444.8"/>
+<text xml:space="preserve" text-anchor="middle" x="912.44" y="-421.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;SpendableInit -->
+<g id="node18" class="node">
+<title>w&#45;SpendableInit</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1358.76,-359.8 1144.89,-359.8 1144.89,-257.8 1358.76,-257.8 1358.76,-359.8"/>
+<text xml:space="preserve" text-anchor="start" x="1233.48" y="-340.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1215.69" y="-317.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor_prev</text>
+<text xml:space="preserve" text-anchor="start" x="1157.89" y="-294.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">creation_set: TachygramSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1207.37" y="-270.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">creation_epoch</text>
+</g>
+<!-- SpendableLift -->
+<g id="node-SpendableLift" class="node" data-node="SpendableLift" role="button" tabindex="0" aria-label="Inspect SpendableLift">
+<title>SpendableLift</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1313.71,-617.48 1189.93,-617.48 1189.93,-578.12 1313.71,-578.12 1313.71,-617.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1251.82" y="-593" font-family="Helvetica,sans-Serif" font-size="16.00">SpendableLift</text>
+</g>
+<!-- OutputBind -->
+<g id="node-OutputBind" class="node" data-node="OutputBind" role="button" tabindex="0" aria-label="Inspect OutputBind">
+<title>OutputBind</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1860.14,-716.48 1754.17,-716.48 1754.17,-677.12 1860.14,-677.12 1860.14,-716.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1807.16" y="-692" font-family="Helvetica,sans-Serif" font-size="16.00">OutputBind</text>
+</g>
+<!-- OutputBind&#45;L -->
+<g id="node21" class="node">
+<title>OutputBind&#45;L</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1583.46,-748.8 1529.46,-748.8 1529.46,-712.8 1583.46,-712.8 1583.46,-748.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1556.46" y="-725.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- OutputBind&#45;R -->
+<g id="node22" class="node">
+<title>OutputBind&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1583.46,-680.8 1529.46,-680.8 1529.46,-644.8 1583.46,-644.8 1583.46,-680.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1556.46" y="-657.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;OutputBind -->
+<g id="node23" class="node">
+<title>w&#45;OutputBind</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1838.5,-607 1775.82,-607 1775.82,-528.6 1838.5,-528.6 1838.5,-607"/>
+<text xml:space="preserve" text-anchor="start" x="1788.82" y="-588.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1794.51" y="-565.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">note</text>
+<text xml:space="preserve" text-anchor="start" x="1798.49" y="-541.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">rcv</text>
+</g>
+<!-- OutputAction -->
+<g id="node-OutputAction" class="node" data-node="OutputAction" role="button" tabindex="0" aria-label="Inspect OutputAction">
+<title>OutputAction</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="2398.26,-668.48 2279.84,-668.48 2279.84,-629.12 2398.26,-629.12 2398.26,-668.48"/>
+<text xml:space="preserve" text-anchor="middle" x="2339.05" y="-644" font-family="Helvetica,sans-Serif" font-size="16.00">OutputAction</text>
+</g>
+<!-- OutputAction&#45;R -->
+<g id="node25" class="node">
+<title>OutputAction&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="2069.52,-618.8 2015.52,-618.8 2015.52,-582.8 2069.52,-582.8 2069.52,-618.8"/>
+<text xml:space="preserve" text-anchor="middle" x="2042.52" y="-595.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;OutputAction -->
+<g id="node26" class="node">
+<title>w&#45;OutputAction</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="2453.2,-597.6 2224.89,-597.6 2224.89,-472 2453.2,-472 2453.2,-597.6"/>
+<text xml:space="preserve" text-anchor="start" x="2320.71" y="-578.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="2324.59" y="-555.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">theta</text>
+<text xml:space="preserve" text-anchor="start" x="2319.17" y="-532.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor</text>
+<text xml:space="preserve" text-anchor="start" x="2265.34" y="-508.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="2237.89" y="-484.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- SpendBind -->
+<g id="node-SpendBind" class="node" data-node="SpendBind" role="button" tabindex="0" aria-label="Inspect SpendBind">
+<title>SpendBind</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1859.26,-473.48 1755.05,-473.48 1755.05,-434.12 1859.26,-434.12 1859.26,-473.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1807.16" y="-449" font-family="Helvetica,sans-Serif" font-size="16.00">SpendBind</text>
+</g>
+<!-- w&#45;SpendBind -->
+<g id="node28" class="node">
+<title>w&#45;SpendBind</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1838.5,-402.2 1775.82,-402.2 1775.82,-347.4 1838.5,-347.4 1838.5,-402.2"/>
+<text xml:space="preserve" text-anchor="start" x="1788.82" y="-383.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1798.49" y="-360.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">rcv</text>
+</g>
+<!-- SpendAction -->
+<g id="node-SpendAction" class="node" data-node="SpendAction" role="button" tabindex="0" aria-label="Inspect SpendAction">
+<title>SpendAction</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="2397.37,-440.48 2280.72,-440.48 2280.72,-401.12 2397.37,-401.12 2397.37,-440.48"/>
+<text xml:space="preserve" text-anchor="middle" x="2339.05" y="-416" font-family="Helvetica,sans-Serif" font-size="16.00">SpendAction</text>
+</g>
+<!-- SpendAction&#45;R -->
+<g id="node30" class="node">
+<title>SpendAction&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="2069.52,-358.8 2015.52,-358.8 2015.52,-322.8 2069.52,-322.8 2069.52,-358.8"/>
+<text xml:space="preserve" text-anchor="middle" x="2042.52" y="-335.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;SpendAction -->
+<g id="node31" class="node">
+<title>w&#45;SpendAction</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="2453.2,-369.6 2224.89,-369.6 2224.89,-244 2453.2,-244 2453.2,-369.6"/>
+<text xml:space="preserve" text-anchor="start" x="2320.71" y="-350.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="2324.59" y="-327.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">theta</text>
+<text xml:space="preserve" text-anchor="start" x="2328.57" y="-304.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">pak</text>
+<text xml:space="preserve" text-anchor="start" x="2265.34" y="-280.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="2237.89" y="-256.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- NullifierFuse -->
+<g id="node-NullifierFuse" class="node" data-node="NullifierFuse" role="button" tabindex="0" aria-label="Inspect NullifierFuse">
+<title>NullifierFuse</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="653.95,-491.48 539.12,-491.48 539.12,-452.12 653.95,-452.12 653.95,-491.48"/>
+<text xml:space="preserve" text-anchor="middle" x="596.53" y="-467" font-family="Helvetica,sans-Serif" font-size="16.00">NullifierFuse</text>
+</g>
+<!-- w&#45;NullifierFuse -->
+<g id="node33" class="node">
+<title>w&#45;NullifierFuse</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="679.99,-420.2 513.08,-420.2 513.08,-365.4 679.99,-365.4 679.99,-420.2"/>
+<text xml:space="preserve" text-anchor="start" x="578.19" y="-401.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="526.08" y="-378.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">merged_seq: NfSeqPoly</text>
+</g>
+<!-- QrSpendableInit -->
+<g id="node-QrSpendableInit" class="node" data-node="QrSpendableInit" role="button" tabindex="0" aria-label="Inspect QrSpendableInit">
+<title>QrSpendableInit</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1322.6,-546.48 1181.05,-546.48 1181.05,-507.12 1322.6,-507.12 1322.6,-546.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1251.82" y="-522" font-family="Helvetica,sans-Serif" font-size="16.00">QrSpendableInit</text>
+</g>
+</g>
+</svg>

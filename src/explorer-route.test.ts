@@ -33,3 +33,11 @@ describe('pool info routes', () => {
     expect(blockIdFromPath(path)).toBeNull();
   });
 });
+
+
+describe('proof tree routes', () => {
+  it.each(['/proof-tree', '/proof-tree/'])('selects Proof tree for %s', (path) => {
+    expect(pageFromPath(path)).toBe('proof-tree');
+    expect(blockIdFromPath(path)).toBeNull();
+  });
+});

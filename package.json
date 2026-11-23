@@ -7,7 +7,8 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "vitest run"
+    "test": "vitest run",
+    "proof-tree:render": "node scripts/render-proof-tree.mjs"
   },
   "dependencies": {
     "@fontsource/space-mono": "^5.2.8",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
     "@types/node": "^24.10.1",
+    "@viz-js/viz": "^3.23.0",
     "jsdom": "^27.4.0",
     "typescript": "^5.9.3",
     "vite": "^7.2.4",

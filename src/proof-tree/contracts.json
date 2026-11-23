@@ -1,0 +1,1117 @@
+{
+  "revision": "fc47e94846ee6f9f3f30a32f884b098e51e30620",
+  "repository": "https://github.com/tachyon-zcash/tachyon",
+  "steps": [
+    {
+      "name": "NoteSeed",
+      "module": "delegation",
+      "line": 163,
+      "index": 0,
+      "left": "()",
+      "right": "()",
+      "output": "NoteSecret",
+      "witness": [
+        {
+          "name": "value",
+          "type": "value::Positive",
+          "polynomial": false
+        },
+        {
+          "name": "psi",
+          "type": "nullifier::Trapdoor",
+          "polynomial": false
+        },
+        {
+          "name": "rcm",
+          "type": "note::CommitmentTrapdoor",
+          "polynomial": false
+        },
+        {
+          "name": "pak",
+          "type": "ProofAuthorizingKey",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "( value::Positive, nullifier::Trapdoor, note::CommitmentTrapdoor, ProofAuthorizingKey, )"
+    },
+    {
+      "name": "NullifierDerive",
+      "module": "delegation",
+      "line": 291,
+      "index": 1,
+      "left": "NoteSecret",
+      "right": "()",
+      "output": "NoteNullifiers",
+      "witness": [
+        {
+          "name": "epoch_start",
+          "type": "EpochIndex",
+          "polynomial": false
+        },
+        {
+          "name": "seq",
+          "type": "NfSeqPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(EpochIndex, NfSeqPoly)"
+    },
+    {
+      "name": "UnspentFuse",
+      "module": "pool",
+      "line": 453,
+      "index": 2,
+      "left": "ArbitraryUnspent",
+      "right": "ArbitraryUnspent",
+      "output": "ArbitraryUnspent",
+      "witness": [
+        {
+          "name": "combined_elapsed_seq",
+          "type": "NfSeqPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(NfSeqPoly,)"
+    },
+    {
+      "name": "UnspentBind",
+      "module": "pool",
+      "line": 723,
+      "index": 3,
+      "left": "ArbitraryUnspent",
+      "right": "NoteNullifiers",
+      "output": "NoteUnspent",
+      "witness": [
+        {
+          "name": "complement_seq",
+          "type": "NfSeqPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(NfSeqPoly,)"
+    },
+    {
+      "name": "SpendableInit",
+      "module": "spendable",
+      "line": 100,
+      "index": 4,
+      "left": "NoteNullifiers",
+      "right": "()",
+      "output": "NoteSpendable",
+      "witness": [
+        {
+          "name": "anchor_prev",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "creation_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "creation_epoch",
+          "type": "EpochIndex",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(Anchor, TachygramSetPoly, EpochIndex)"
+    },
+    {
+      "name": "SpendableLift",
+      "module": "spendable",
+      "line": 304,
+      "index": 5,
+      "left": "NoteSpendable",
+      "right": "NoteUnspent",
+      "output": "NoteSpendable",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "OutputBind",
+      "module": "output",
+      "line": 78,
+      "index": 6,
+      "left": "()",
+      "right": "()",
+      "output": "OutputHeader",
+      "witness": [
+        {
+          "name": "note",
+          "type": "Note",
+          "polynomial": false
+        },
+        {
+          "name": "rcv",
+          "type": "value::Trapdoor",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(Note, value::Trapdoor)"
+    },
+    {
+      "name": "OutputAction",
+      "module": "stamp",
+      "line": 162,
+      "index": 7,
+      "left": "OutputHeader",
+      "right": "()",
+      "output": "Actions",
+      "witness": [
+        {
+          "name": "theta",
+          "type": "ActionEntropy",
+          "polynomial": false
+        },
+        {
+          "name": "anchor",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(ActionEntropy, Anchor, ActionSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "SpendBind",
+      "module": "spend",
+      "line": 124,
+      "index": 8,
+      "left": "NoteSpendable",
+      "right": "NoteSecret",
+      "output": "SpendHeader",
+      "witness": [
+        {
+          "name": "rcv",
+          "type": "value::Trapdoor",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(value::Trapdoor,)"
+    },
+    {
+      "name": "SpendAction",
+      "module": "stamp",
+      "line": 283,
+      "index": 9,
+      "left": "SpendHeader",
+      "right": "()",
+      "output": "Actions",
+      "witness": [
+        {
+          "name": "theta",
+          "type": "ActionEntropy",
+          "polynomial": false
+        },
+        {
+          "name": "pak",
+          "type": "ProofAuthorizingKey",
+          "polynomial": false
+        },
+        {
+          "name": "action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "( ActionEntropy, ProofAuthorizingKey, ActionSetPoly, TachygramSetPoly, )"
+    },
+    {
+      "name": "StampMerge",
+      "module": "stamp",
+      "line": 411,
+      "index": 10,
+      "left": "Stamp",
+      "right": "Stamp",
+      "output": "Stamp",
+      "witness": [
+        {
+          "name": "action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(ActionSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "StampLift",
+      "module": "stamp",
+      "line": 590,
+      "index": 11,
+      "left": "Stamp",
+      "right": "AnchorSpan",
+      "output": "Stamp",
+      "witness": [
+        {
+          "name": "action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(ActionSetPoly,)"
+    },
+    {
+      "name": "NullifierFuse",
+      "module": "delegation",
+      "line": 426,
+      "index": 12,
+      "left": "NoteNullifiers",
+      "right": "NoteNullifiers",
+      "output": "NoteNullifiers",
+      "witness": [
+        {
+          "name": "merged_seq",
+          "type": "NfSeqPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(NfSeqPoly,)"
+    },
+    {
+      "name": "SummarySeed",
+      "module": "summary",
+      "line": 112,
+      "index": 13,
+      "left": "()",
+      "right": "()",
+      "output": "Summary",
+      "witness": [
+        {
+          "name": "anchor_prev",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "epoch",
+          "type": "EpochIndex",
+          "polynomial": false
+        },
+        {
+          "name": "stamp",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(Anchor, EpochIndex, TachygramSetPoly)"
+    },
+    {
+      "name": "SummaryAdvance",
+      "module": "summary",
+      "line": 209,
+      "index": 14,
+      "left": "Summary",
+      "right": "()",
+      "output": "Summary",
+      "witness": [
+        {
+          "name": "extended",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "stamp",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(TachygramSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "QrSummaryIntake",
+      "module": "qr",
+      "line": 249,
+      "index": 15,
+      "left": "Summary",
+      "right": "()",
+      "output": "QrIntake",
+      "witness": [
+        {
+          "name": "discriminant",
+          "type": "QrDiscriminant",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(QrDiscriminant,)"
+    },
+    {
+      "name": "QrIntakeMerge",
+      "module": "qr",
+      "line": 544,
+      "index": 16,
+      "left": "QrIntake",
+      "right": "QrIntake",
+      "output": "QrIntake",
+      "witness": [
+        {
+          "name": "merged",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(TachygramSetPoly,)"
+    },
+    {
+      "name": "QrIntakeSplit",
+      "module": "qr",
+      "line": 642,
+      "index": 17,
+      "left": "QrIntake",
+      "right": "()",
+      "output": "QrIntakeSides",
+      "witness": [
+        {
+          "name": "non_residue",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "residue",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(TachygramSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "QrSideDescend",
+      "module": "qr",
+      "line": 834,
+      "index": 18,
+      "left": "QrIntakeSides",
+      "right": "QrSideSelection",
+      "output": "QrIntake",
+      "witness": [
+        {
+          "name": "class",
+          "type": "QrClass",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(QrClass,)"
+    },
+    {
+      "name": "QrUnspentInit",
+      "module": "qr",
+      "line": 1264,
+      "index": 19,
+      "left": "QrBucket",
+      "right": "()",
+      "output": "ArbitraryUnspent",
+      "witness": [
+        {
+          "name": "value",
+          "type": "Tachygram",
+          "polynomial": false
+        },
+        {
+          "name": "path",
+          "type": "[QrClass; QrProfile::MAX_DEPTH]",
+          "polynomial": false
+        },
+        {
+          "name": "roots",
+          "type": "[QrClassRoot; QrProfile::MAX_DEPTH]",
+          "polynomial": false
+        },
+        {
+          "name": "mask",
+          "type": "[bool; QrProfile::MAX_DEPTH]",
+          "polynomial": false
+        },
+        {
+          "name": "sequence",
+          "type": "NfSeqPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "( Tachygram, [QrClass; QrProfile::MAX_DEPTH], [QrClassRoot; QrProfile::MAX_DEPTH], [bool; QrProfile::MAX_DEPTH], NfSeqPoly, )"
+    },
+    {
+      "name": "QrBucketSeal",
+      "module": "qr",
+      "line": 1110,
+      "index": 20,
+      "left": "QrIntake",
+      "right": "()",
+      "output": "QrBucket",
+      "witness": [
+        {
+          "name": "anchor_final_prev",
+          "type": "Anchor",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(Anchor,)"
+    },
+    {
+      "name": "QrStampIntakeSeed",
+      "module": "qr",
+      "line": 341,
+      "index": 21,
+      "left": "()",
+      "right": "()",
+      "output": "QrIntake",
+      "witness": [
+        {
+          "name": "anchor_prev",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "epoch",
+          "type": "EpochIndex",
+          "polynomial": false
+        },
+        {
+          "name": "discriminant",
+          "type": "QrDiscriminant",
+          "polynomial": false
+        },
+        {
+          "name": "stamp",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(Anchor, EpochIndex, QrDiscriminant, TachygramSetPoly)"
+    },
+    {
+      "name": "QrSpendableInit",
+      "module": "spendable",
+      "line": 216,
+      "index": 22,
+      "left": "NoteUnspent",
+      "right": "QrBucket",
+      "output": "NoteSpendable",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "QrEmptyIntakeSeed",
+      "module": "qr",
+      "line": 461,
+      "index": 23,
+      "left": "()",
+      "right": "()",
+      "output": "QrIntake",
+      "witness": [
+        {
+          "name": "anchor",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "epoch",
+          "type": "EpochIndex",
+          "polynomial": false
+        },
+        {
+          "name": "discriminant",
+          "type": "QrDiscriminant",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "(Anchor, EpochIndex, QrDiscriminant)"
+    },
+    {
+      "name": "UnspentLift",
+      "module": "pool",
+      "line": 562,
+      "index": 24,
+      "left": "ArbitraryUnspent",
+      "right": "QrBucket",
+      "output": "ArbitraryUnspent",
+      "witness": [
+        {
+          "name": "value",
+          "type": "Tachygram",
+          "polynomial": false
+        },
+        {
+          "name": "path",
+          "type": "[QrClass; QrProfile::MAX_DEPTH]",
+          "polynomial": false
+        },
+        {
+          "name": "roots",
+          "type": "[QrClassRoot; QrProfile::MAX_DEPTH]",
+          "polynomial": false
+        },
+        {
+          "name": "mask",
+          "type": "[bool; QrProfile::MAX_DEPTH]",
+          "polynomial": false
+        },
+        {
+          "name": "extended_seq",
+          "type": "NfSeqPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "( Tachygram, [QrClass; QrProfile::MAX_DEPTH], [QrClassRoot; QrProfile::MAX_DEPTH], [bool; QrProfile::MAX_DEPTH], NfSeqPoly, )"
+    },
+    {
+      "name": "EvidenceTreePairFuse",
+      "module": "evidence",
+      "line": 314,
+      "index": 25,
+      "left": "EvidenceTree",
+      "right": "EvidenceTree",
+      "output": "EvidenceTreePair",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "EvidenceTreeFuse",
+      "module": "evidence",
+      "line": 398,
+      "index": 26,
+      "left": "EvidenceTreePair",
+      "right": "EvidenceTreePair",
+      "output": "EvidenceTree",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "EvidenceTreeCap",
+      "module": "evidence",
+      "line": 491,
+      "index": 27,
+      "left": "EvidenceTree",
+      "right": "()",
+      "output": "EvidenceTree",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "EvidenceTreeDescend",
+      "module": "evidence",
+      "line": 584,
+      "index": 28,
+      "left": "EvidenceTree",
+      "right": "()",
+      "output": "EvidenceTree",
+      "witness": [
+        {
+          "name": "path",
+          "type": "[([bool; 2], [EvidenceTreeRoot; EVIDENCE_TREE_ARITY]); Self::LEVELS]",
+          "polynomial": false
+        }
+      ],
+      "witnessType": "([([bool; 2], [EvidenceTreeRoot; EVIDENCE_TREE_ARITY]); Self::LEVELS],)"
+    },
+    {
+      "name": "EvidenceTreeOpen",
+      "module": "evidence",
+      "line": 710,
+      "index": 29,
+      "left": "EvidenceTree",
+      "right": "()",
+      "output": "QrBucket",
+      "witness": [
+        {
+          "name": "profile",
+          "type": "QrProfile",
+          "polynomial": false
+        },
+        {
+          "name": "contents",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(QrProfile, TachygramSetPoly)"
+    },
+    {
+      "name": "EvidenceTreeLeafPair",
+      "module": "evidence",
+      "line": 211,
+      "index": 30,
+      "left": "QrBucket",
+      "right": "QrBucket",
+      "output": "EvidenceTreePair",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "AnchorSpanSeed",
+      "module": "pool",
+      "line": 263,
+      "index": 31,
+      "left": "()",
+      "right": "()",
+      "output": "AnchorSpan",
+      "witness": [
+        {
+          "name": "anchor_start",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "epoch",
+          "type": "EpochIndex",
+          "polynomial": false
+        },
+        {
+          "name": "stamp",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(Anchor, EpochIndex, TachygramSetPoly)"
+    },
+    {
+      "name": "AnchorSpanFuse",
+      "module": "pool",
+      "line": 374,
+      "index": 32,
+      "left": "AnchorSpan",
+      "right": "AnchorSpan",
+      "output": "AnchorSpan",
+      "witness": [
+        {
+          "name": "combined",
+          "type": "AnchorSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(AnchorSetPoly,)"
+    },
+    {
+      "name": "FeeFuse",
+      "module": "stamp",
+      "line": 762,
+      "index": 33,
+      "left": "Actions",
+      "right": "()",
+      "output": "Stamp",
+      "witness": [
+        {
+          "name": "max_fee_note",
+          "type": "Note",
+          "polynomial": false
+        },
+        {
+          "name": "fee",
+          "type": "value::Positive",
+          "polynomial": false
+        },
+        {
+          "name": "output_action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "output_tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(Note, value::Positive, (ActionSetPoly, TachygramSetPoly))"
+    },
+    {
+      "name": "ActionMerge",
+      "module": "stamp",
+      "line": 501,
+      "index": 34,
+      "left": "Actions",
+      "right": "Actions",
+      "output": "Actions",
+      "witness": [
+        {
+          "name": "action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(ActionSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "ActionLift",
+      "module": "stamp",
+      "line": 680,
+      "index": 35,
+      "left": "Actions",
+      "right": "AnchorSpan",
+      "output": "Actions",
+      "witness": [],
+      "witnessType": "()"
+    },
+    {
+      "name": "FeeSeed",
+      "module": "stamp",
+      "line": 915,
+      "index": 36,
+      "left": "()",
+      "right": "()",
+      "output": "Stamp",
+      "witness": [
+        {
+          "name": "max_fee_note",
+          "type": "Note",
+          "polynomial": false
+        },
+        {
+          "name": "anchor",
+          "type": "Anchor",
+          "polynomial": false
+        },
+        {
+          "name": "fee_action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "fee_tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(Note, Anchor, ActionSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "StampUnmerge",
+      "module": "stamp",
+      "line": 1080,
+      "index": 37,
+      "left": "Stamp",
+      "right": "Stamp",
+      "output": "Stamp",
+      "witness": [
+        {
+          "name": "action_set",
+          "type": "ActionSetPoly",
+          "polynomial": true
+        },
+        {
+          "name": "tachygram_set",
+          "type": "TachygramSetPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(ActionSetPoly, TachygramSetPoly)"
+    },
+    {
+      "name": "QrSideSelect",
+      "module": "qr",
+      "line": 736,
+      "index": 38,
+      "left": "QrIntakeSides",
+      "right": "()",
+      "output": "QrSideSelection",
+      "witness": [
+        {
+          "name": "interpolant",
+          "type": "QrInterpolantPoly",
+          "polynomial": true
+        },
+        {
+          "name": "quotient",
+          "type": "QrQuotientPoly",
+          "polynomial": true
+        }
+      ],
+      "witnessType": "(QrInterpolantPoly, QrQuotientPoly)"
+    }
+  ],
+  "headers": [
+    {
+      "name": "Actions",
+      "module": "stamp",
+      "line": 56,
+      "fields": [
+        "anchor"
+      ],
+      "dataType": "Anchor",
+      "slots": [
+        "PolySlot<ActionSetPoly>",
+        "PolySlot<TachygramSetPoly>"
+      ]
+    },
+    {
+      "name": "AnchorSpan",
+      "module": "pool",
+      "line": 219,
+      "fields": [
+        "anchor_start",
+        "anchor_end"
+      ],
+      "dataType": "(Anchor, Anchor)",
+      "slots": [
+        "PolySlot<AnchorSetPoly>",
+        "PolySlot<TachygramSetPoly>"
+      ]
+    },
+    {
+      "name": "ArbitraryUnspent",
+      "module": "pool",
+      "line": 86,
+      "fields": [
+        "anchor_start",
+        "epoch_start",
+        "epoch_next",
+        "anchor_next"
+      ],
+      "dataType": "(Anchor, EpochIndex, EpochIndex, Anchor)",
+      "slots": [
+        "PolySlot<NfSeqPoly>",
+        "Padding"
+      ]
+    },
+    {
+      "name": "EvidenceTree",
+      "module": "evidence",
+      "line": 64,
+      "fields": [
+        "epoch",
+        "anchor_start",
+        "anchor_next",
+        "discriminant",
+        "root"
+      ],
+      "dataType": "(EpochIndex, Anchor, Anchor, QrDiscriminant, EvidenceTreeRoot)",
+      "slots": [
+        "Padding",
+        "Padding"
+      ]
+    },
+    {
+      "name": "EvidenceTreePair",
+      "module": "evidence",
+      "line": 133,
+      "fields": [
+        "epoch",
+        "anchor_start",
+        "anchor_next",
+        "discriminant",
+        "first",
+        "second"
+      ],
+      "dataType": "( EpochIndex, Anchor, Anchor, QrDiscriminant, EvidenceTreeRoot, EvidenceTreeRoot, )",
+      "slots": [
+        "Padding",
+        "Padding"
+      ]
+    },
+    {
+      "name": "NoteNullifiers",
+      "module": "delegation",
+      "line": 113,
+      "fields": [
+        "cm",
+        "epoch_start",
+        "epoch_end"
+      ],
+      "dataType": "(note::Commitment, EpochIndex, EpochIndex)",
+      "slots": [
+        "PolySlot<NfSeqPoly>",
+        "Padding"
+      ]
+    },
+    {
+      "name": "NoteSecret",
+      "module": "delegation",
+      "line": 51,
+      "fields": [
+        "cm",
+        "note",
+        "mk"
+      ],
+      "dataType": "(note::Commitment, Note, NoteMasterKey)",
+      "slots": [
+        "Padding",
+        "Padding"
+      ]
+    },
+    {
+      "name": "NoteSpendable",
+      "module": "spendable",
+      "line": 44,
+      "fields": [
+        "cm",
+        "epoch_current",
+        "anchor"
+      ],
+      "dataType": "(note::Commitment, EpochIndex, Anchor)",
+      "slots": [
+        "Padding",
+        "PolySlot<TachygramSetPoly>"
+      ]
+    },
+    {
+      "name": "NoteUnspent",
+      "module": "pool",
+      "line": 144,
+      "fields": [
+        "cm",
+        "anchor_start",
+        "epoch_start",
+        "epoch_next",
+        "anchor_next"
+      ],
+      "dataType": "(note::Commitment, Anchor, EpochIndex, EpochIndex, Anchor)",
+      "slots": [
+        "PolySlot<NfSeqPoly>",
+        "Padding"
+      ]
+    },
+    {
+      "name": "OutputHeader",
+      "module": "output",
+      "line": 41,
+      "fields": [
+        "cm",
+        "pad",
+        "cv"
+      ],
+      "dataType": "(Tachygram, Tachygram, value::Commitment)",
+      "slots": [
+        "Padding",
+        "Padding"
+      ]
+    },
+    {
+      "name": "QrBucket",
+      "module": "qr",
+      "line": 988,
+      "fields": [
+        "epoch",
+        "anchor_start",
+        "anchor_next",
+        "discriminant",
+        "profile",
+        "contents_hash"
+      ],
+      "dataType": "( EpochIndex, Anchor, Anchor, QrDiscriminant, QrProfile, TachygramSetBridge, )",
+      "slots": [
+        "Padding",
+        "PolySlot<TachygramSetPoly>"
+      ]
+    },
+    {
+      "name": "QrIntake",
+      "module": "qr",
+      "line": 75,
+      "fields": [
+        "epoch",
+        "anchor_prev",
+        "anchor_end",
+        "discriminant",
+        "profile"
+      ],
+      "dataType": "(EpochIndex, Anchor, Anchor, QrDiscriminant, QrProfile)",
+      "slots": [
+        "Padding",
+        "PolySlot<TachygramSetPoly>"
+      ]
+    },
+    {
+      "name": "QrIntakeSides",
+      "module": "qr",
+      "line": 157,
+      "fields": [
+        "epoch",
+        "anchor_prev",
+        "anchor_end",
+        "discriminant",
+        "profile",
+        "non_residue_hash"
+      ],
+      "dataType": "( EpochIndex, Anchor, Anchor, QrDiscriminant, QrProfile, TachygramSetBridge, )",
+      "slots": [
+        "PolySlot<TachygramSetPoly, ResidueSide>",
+        "PolySlot<TachygramSetPoly, NonResidueSide>"
+      ]
+    },
+    {
+      "name": "QrSideSelection",
+      "module": "qr",
+      "line": 222,
+      "fields": [
+        "epoch",
+        "anchor_prev",
+        "anchor_end",
+        "discriminant",
+        "profile",
+        "non_residue_hash"
+      ],
+      "dataType": "<QrIntakeSides as Header<Fp>>::Data",
+      "slots": [
+        "PolySlot<QrInterpolantPoly>",
+        "PolySlot<QrQuotientPoly>"
+      ]
+    },
+    {
+      "name": "SpendHeader",
+      "module": "spend",
+      "line": 49,
+      "fields": [
+        "cm",
+        "nf_current",
+        "nf_next",
+        "anchor",
+        "pk",
+        "cv"
+      ],
+      "dataType": "( note::Commitment, Nullifier, Nullifier, Anchor, PaymentKey, value::Commitment, )",
+      "slots": [
+        "Padding",
+        "Padding"
+      ]
+    },
+    {
+      "name": "Stamp",
+      "module": "stamp",
+      "line": 98,
+      "fields": [
+        "tachygram_set_bridge",
+        "anchor"
+      ],
+      "dataType": "(TachygramSetBridge, Anchor)",
+      "slots": [
+        "PolySlot<ActionSetPoly>",
+        "PolySlot<TachygramSetPoly>"
+      ]
+    },
+    {
+      "name": "Summary",
+      "module": "summary",
+      "line": 60,
+      "fields": [
+        "epoch",
+        "anchor_prev",
+        "anchor_end"
+      ],
+      "dataType": "(EpochIndex, Anchor, Anchor)",
+      "slots": [
+        "PolySlot<TachygramSetPoly, Accumulated>",
+        "PolySlot<TachygramSetPoly, LastStamp>"
+      ]
+    }
+  ]
+}

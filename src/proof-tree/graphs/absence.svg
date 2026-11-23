@@ -1,0 +1,270 @@
+<svg role="group" aria-label="Proof types and their dependencies"
+ viewBox="0.00 0.00 2262.00 741.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 715.31)">
+<!-- ArbitraryUnspent&#45;&gt;UnspentFuse -->
+<g id="edge1" class="edge">
+<title>ArbitraryUnspent&#45;&gt;UnspentFuse</title>
+<path fill="none" stroke="#44413b" d="M696.37,-150.71C656.8,-150.71 617.24,-150.71 585.37,-150.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="585.53,-148.26 578.53,-150.71 585.53,-153.16 585.53,-148.26"/>
+<text xml:space="preserve" text-anchor="middle" x="595.14" y="-138.95" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- ArbitraryUnspent&#45;&gt;UnspentFuse -->
+<g id="edge2" class="edge">
+<title>ArbitraryUnspent&#45;&gt;UnspentFuse</title>
+<path fill="none" stroke="#44413b" d="M704.55,-174.68C662.34,-174.91 619.53,-173.36 585.48,-170.05"/>
+<polygon fill="#44413b" stroke="#44413b" points="585.74,-167.61 578.52,-169.32 585.23,-172.48 585.74,-167.61"/>
+<text xml:space="preserve" text-anchor="middle" x="595.92" y="-159.34" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- ArbitraryUnspent&#45;&gt;UnspentBind -->
+<g id="edge5" class="edge">
+<title>ArbitraryUnspent&#45;&gt;UnspentBind</title>
+<path fill="none" stroke="#44413b" d="M1058.11,-150.71C1091.46,-150.71 1124.3,-150.71 1151.47,-150.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="1151.2,-153.16 1158.2,-150.71 1151.2,-148.26 1151.2,-153.16"/>
+<text xml:space="preserve" text-anchor="middle" x="1141.59" y="-155.86" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- ArbitraryUnspent&#45;&gt;UnspentLift -->
+<g id="edge19" class="edge">
+<title>ArbitraryUnspent&#45;&gt;UnspentLift</title>
+<path fill="none" stroke="#44413b" d="M703.53,-128.59C658.52,-119.79 612.92,-109.88 578.06,-101.08"/>
+<polygon fill="#44413b" stroke="#44413b" points="578.75,-98.73 571.36,-99.37 577.53,-103.48 578.75,-98.73"/>
+<text xml:space="preserve" text-anchor="middle" x="589.55" y="-92" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteNullifiers&#45;&gt;UnspentBind -->
+<g id="edge6" class="edge">
+<title>NoteNullifiers&#45;&gt;UnspentBind</title>
+<path fill="none" stroke="#44413b" d="M985.41,-285.33C1009.87,-274.26 1035.18,-261.25 1057.36,-246.71 1090.24,-225.15 1088.89,-207.34 1122.36,-186.71 1131.52,-181.06 1141.71,-176.07 1151.93,-171.74"/>
+<polygon fill="#44413b" stroke="#44413b" points="1152.77,-174.04 1158.33,-169.13 1150.92,-169.5 1152.77,-174.04"/>
+<text xml:space="preserve" text-anchor="middle" x="1146.14" y="-179.93" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- NoteSpendable&#45;&gt;SpendableLift -->
+<g id="edge9" class="edge">
+<title>NoteSpendable&#45;&gt;SpendableLift</title>
+<path fill="none" stroke="#44413b" d="M1955.35,-142.7C1928.72,-146.53 1901.32,-149.81 1877.46,-151.98"/>
+<polygon fill="#44413b" stroke="#44413b" points="1877.45,-149.52 1870.69,-152.57 1877.87,-154.4 1877.45,-149.52"/>
+<text xml:space="preserve" text-anchor="middle" x="1886.51" y="-139.41" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- NoteUnspent&#45;&gt;SpendableLift -->
+<g id="edge10" class="edge">
+<title>NoteUnspent&#45;&gt;SpendableLift</title>
+<path fill="none" stroke="#44413b" d="M1671.64,-150.71C1694.03,-150.71 1716.23,-150.71 1735.94,-150.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="1735.71,-153.16 1742.71,-150.71 1735.71,-148.26 1735.71,-153.16"/>
+<text xml:space="preserve" text-anchor="middle" x="1726.1" y="-155.86" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- NoteUnspent&#45;&gt;QrSpendableInit -->
+<g id="edge16" class="edge">
+<title>NoteUnspent&#45;&gt;QrSpendableInit</title>
+<path fill="none" stroke="#44413b" d="M1658.17,-117.28C1681.84,-111.26 1705.82,-105.15 1727.37,-99.66"/>
+<polygon fill="#44413b" stroke="#44413b" points="1727.86,-102.06 1734.04,-97.96 1726.65,-97.31 1727.86,-102.06"/>
+<text xml:space="preserve" text-anchor="middle" x="1720.03" y="-106.95" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- QrBucket&#45;&gt;QrUnspentInit -->
+<g id="edge12" class="edge">
+<title>QrBucket&#45;&gt;QrUnspentInit</title>
+<path fill="none" stroke="#44413b" d="M212.22,-156.96C252.91,-222.09 319.27,-313.17 399.9,-367.71 413.37,-376.81 429.29,-383.62 444.93,-388.68"/>
+<polygon fill="#44413b" stroke="#44413b" points="444.2,-391.02 451.61,-390.73 445.64,-386.34 444.2,-391.02"/>
+<text xml:space="preserve" text-anchor="middle" x="433.26" y="-390.65" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- QrBucket&#45;&gt;QrSpendableInit -->
+<g id="edge17" class="edge">
+<title>QrBucket&#45;&gt;QrSpendableInit</title>
+<path fill="none" stroke="#44413b" d="M326.33,-53.31C350.91,-49.74 376.06,-46.38 399.9,-43.71 610.74,-20.05 663.96,-10.71 876.12,-10.71 876.12,-10.71 876.12,-10.71 1220.18,-10.71 1421.47,-10.71 1471.62,-26.55 1670.93,-54.71 1689.12,-57.27 1708.59,-60.57 1726.92,-63.91"/>
+<polygon fill="#44413b" stroke="#44413b" points="1726.43,-66.31 1733.76,-65.18 1727.32,-61.5 1726.43,-66.31"/>
+<text xml:space="preserve" text-anchor="middle" x="1715.89" y="-67.17" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- QrBucket&#45;&gt;UnspentLift -->
+<g id="edge20" class="edge">
+<title>QrBucket&#45;&gt;UnspentLift</title>
+<path fill="none" stroke="#44413b" d="M335.58,-79.71C377.85,-79.71 420.61,-79.71 453.76,-79.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="453.46,-82.16 460.46,-79.71 453.46,-77.26 453.46,-82.16"/>
+<text xml:space="preserve" text-anchor="middle" x="443.85" y="-84.86" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- UnspentFuse&#45;&gt;ArbitraryUnspent -->
+<g id="edge3" class="edge">
+<title>UnspentFuse&#45;&gt;ArbitraryUnspent</title>
+<path fill="none" stroke="#44413b" d="M577.01,-132.25C610.13,-128.56 653.17,-126.71 696.23,-126.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="696.03,-129.15 703.04,-126.72 696.04,-124.25 696.03,-129.15"/>
+</g>
+<!-- w&#45;UnspentFuse&#45;&gt;UnspentFuse -->
+<g id="edge4" class="edge">
+<title>w&#45;UnspentFuse&#45;&gt;UnspentFuse</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M401.35,-635.51C387.75,-627.5 375.76,-617.13 367.4,-603.71 343.8,-565.78 343.8,-239.63 367.4,-201.71 384.19,-174.73 416.48,-161.74 446.68,-155.6"/>
+<polygon fill="#44413b" stroke="#44413b" points="446.78,-158.07 453.22,-154.39 445.89,-153.26 446.78,-158.07"/>
+</g>
+<!-- UnspentBind&#45;&gt;NoteUnspent -->
+<g id="edge7" class="edge">
+<title>UnspentBind&#45;&gt;NoteUnspent</title>
+<path fill="none" stroke="#44413b" d="M1278.59,-150.71C1305.44,-150.71 1338.67,-150.71 1371.95,-150.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="1371.89,-153.16 1378.89,-150.71 1371.89,-148.26 1371.89,-153.16"/>
+</g>
+<!-- w&#45;UnspentBind&#45;&gt;UnspentBind -->
+<g id="edge8" class="edge">
+<title>w&#45;UnspentBind&#45;&gt;UnspentBind</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1219.18,-202.68C1219.18,-194.94 1219.18,-187.2 1219.18,-179.47"/>
+<polygon fill="#44413b" stroke="#44413b" points="1221.63,-179.59 1219.18,-172.59 1216.73,-179.59 1221.63,-179.59"/>
+</g>
+<!-- SpendableLift&#45;&gt;NoteSpendable -->
+<g id="edge11" class="edge">
+<title>SpendableLift&#45;&gt;NoteSpendable</title>
+<path fill="none" stroke="#44413b" d="M1869.18,-132.11C1888.75,-128.43 1911.28,-124.82 1934.07,-121.65"/>
+<polygon fill="#44413b" stroke="#44413b" points="1934.37,-124.08 1940.97,-120.7 1933.71,-119.23 1934.37,-124.08"/>
+</g>
+<!-- QrUnspentInit&#45;&gt;ArbitraryUnspent -->
+<g id="edge14" class="edge">
+<title>QrUnspentInit&#45;&gt;ArbitraryUnspent</title>
+<path fill="none" stroke="#44413b" d="M578.82,-393.25C597.38,-388.08 616.78,-380.07 631.87,-367.71 679.08,-329 653.68,-289.84 696.87,-246.71 709.99,-233.61 725.26,-221.85 741.25,-211.42"/>
+<polygon fill="#44413b" stroke="#44413b" points="742.28,-213.67 746.87,-207.85 739.65,-209.54 742.28,-213.67"/>
+</g>
+<!-- QrUnspentInit&#45;R&#45;&gt;QrUnspentInit -->
+<g id="edge13" class="edge">
+<title>QrUnspentInit&#45;R&#45;&gt;QrUnspentInit</title>
+<path fill="none" stroke="#44413b" d="M194.21,-402.71C246.63,-402.71 367.32,-402.71 444.77,-402.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="444.55,-405.16 451.55,-402.71 444.55,-400.26 444.55,-405.16"/>
+<text xml:space="preserve" text-anchor="middle" x="449.09" y="-392.81" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;QrUnspentInit&#45;&gt;QrUnspentInit -->
+<g id="edge15" class="edge">
+<title>w&#45;QrUnspentInit&#45;&gt;QrUnspentInit</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M515.89,-454.3C515.89,-446.61 515.89,-438.92 515.89,-431.23"/>
+<polygon fill="#44413b" stroke="#44413b" points="518.34,-431.4 515.89,-424.4 513.44,-431.4 518.34,-431.4"/>
+</g>
+<!-- QrSpendableInit&#45;&gt;NoteSpendable -->
+<g id="edge18" class="edge">
+<title>QrSpendableInit&#45;&gt;NoteSpendable</title>
+<path fill="none" stroke="#44413b" d="M1878.07,-88.95C1896.72,-91.4 1917.5,-94.13 1938.37,-96.87"/>
+<polygon fill="#44413b" stroke="#44413b" points="1937.92,-99.28 1945.18,-97.76 1938.56,-94.42 1937.92,-99.28"/>
+</g>
+<!-- UnspentLift&#45;&gt;ArbitraryUnspent -->
+<g id="edge21" class="edge">
+<title>UnspentLift&#45;&gt;ArbitraryUnspent</title>
+<path fill="none" stroke="#44413b" d="M569.89,-81.37C608.41,-86.58 662.74,-96.27 714.96,-106.91"/>
+<polygon fill="#44413b" stroke="#44413b" points="714.15,-109.25 721.5,-108.25 715.14,-104.45 714.15,-109.25"/>
+</g>
+<!-- w&#45;UnspentLift&#45;&gt;UnspentLift -->
+<g id="edge22" class="edge">
+<title>w&#45;UnspentLift&#45;&gt;UnspentLift</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M427.89,-235.95C382.76,-209.06 342.09,-171.38 367.4,-130.71 385.53,-101.58 421.71,-88.77 453.82,-83.27"/>
+<polygon fill="#44413b" stroke="#44413b" points="453.84,-85.74 460.38,-82.25 453.09,-80.9 453.84,-85.74"/>
+</g>
+<!-- ArbitraryUnspent -->
+<g id="node-ArbitraryUnspent" class="node" data-node="ArbitraryUnspent" role="button" tabindex="0" aria-label="Inspect ArbitraryUnspent">
+<title>ArbitraryUnspent</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="877.12" cy="-150.71" rx="180.24" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="813.34" y="-181.01" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">ArbitraryUnspent</text>
+<text xml:space="preserve" text-anchor="start" x="766.18" y="-156.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor_start, epoch_start, epoch_next</text>
+<text xml:space="preserve" text-anchor="start" x="841.34" y="-132.61" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="834.12" y="-109.01" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: NfSeqPoly</text>
+</g>
+<!-- NoteNullifiers -->
+<g id="node-NoteNullifiers" class="node" data-node="NoteNullifiers" role="button" tabindex="0" aria-label="Inspect NoteNullifiers">
+<title>NoteNullifiers</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="877.12" cy="-325.71" rx="139.36" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="826.57" y="-344.21" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteNullifiers</text>
+<text xml:space="preserve" text-anchor="start" x="795.09" y="-319.41" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, epoch_start, epoch_end</text>
+<text xml:space="preserve" text-anchor="start" x="834.12" y="-295.81" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: NfSeqPoly</text>
+</g>
+<!-- NoteSpendable -->
+<g id="node-NoteSpendable" class="node" data-node="NoteSpendable" role="button" tabindex="0" aria-label="Inspect NoteSpendable">
+<title>NoteSpendable</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="2075.19" cy="-114.71" rx="132.71" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="2016.59" y="-133.21" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteSpendable</text>
+<text xml:space="preserve" text-anchor="start" x="1997.87" y="-108.41" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, epoch_current, anchor</text>
+<text xml:space="preserve" text-anchor="start" x="2008" y="-84.81" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- NoteUnspent -->
+<g id="node-NoteUnspent" class="node" data-node="NoteUnspent" role="button" tabindex="0" aria-label="Inspect NoteUnspent">
+<title>NoteUnspent</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="1525.97" cy="-150.71" rx="144.96" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="1476.35" y="-181.01" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">NoteUnspent</text>
+<text xml:space="preserve" text-anchor="start" x="1439.98" y="-156.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, anchor_start, epoch_start</text>
+<text xml:space="preserve" text-anchor="start" x="1452.97" y="-132.61" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch_next, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="1482.97" y="-109.01" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: NfSeqPoly</text>
+</g>
+<!-- QrBucket -->
+<g id="node-QrBucket" class="node" data-node="QrBucket" role="button" tabindex="0" aria-label="Inspect QrBucket">
+<title>QrBucket</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="167.45" cy="-79.71" rx="167.45" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="132.02" y="-110.01" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">QrBucket</text>
+<text xml:space="preserve" text-anchor="start" x="70.61" y="-85.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch, anchor_start, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="65.57" y="-61.61" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">discriminant, profile, contents_hash</text>
+<text xml:space="preserve" text-anchor="start" x="100.26" y="-38.01" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- UnspentFuse -->
+<g id="node-UnspentFuse" class="node" data-node="UnspentFuse" role="button" tabindex="0" aria-label="Inspect UnspentFuse">
+<title>UnspentFuse</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="576.43,-170.39 455.35,-170.39 455.35,-131.03 576.43,-131.03 576.43,-170.39"/>
+<text xml:space="preserve" text-anchor="middle" x="515.89" y="-145.91" font-family="Helvetica,sans-Serif" font-size="16.00">UnspentFuse</text>
+</g>
+<!-- w&#45;UnspentFuse -->
+<g id="node7" class="node">
+<title>w&#45;UnspentFuse</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="631.87,-690.11 399.9,-690.11 399.9,-635.31 631.87,-635.31 631.87,-690.11"/>
+<text xml:space="preserve" text-anchor="start" x="497.55" y="-671.21" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="412.9" y="-648.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">combined_elapsed_seq: NfSeqPoly</text>
+</g>
+<!-- UnspentBind -->
+<g id="node-UnspentBind" class="node" data-node="UnspentBind" role="button" tabindex="0" aria-label="Inspect UnspentBind">
+<title>UnspentBind</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1277.95,-170.39 1160.41,-170.39 1160.41,-131.03 1277.95,-131.03 1277.95,-170.39"/>
+<text xml:space="preserve" text-anchor="middle" x="1219.18" y="-145.91" font-family="Helvetica,sans-Serif" font-size="16.00">UnspentBind</text>
+</g>
+<!-- w&#45;UnspentBind -->
+<g id="node9" class="node">
+<title>w&#45;UnspentBind</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1316,-257.11 1122.36,-257.11 1122.36,-202.31 1316,-202.31 1316,-257.11"/>
+<text xml:space="preserve" text-anchor="start" x="1200.84" y="-238.21" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1135.36" y="-215.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">complement_seq: NfSeqPoly</text>
+</g>
+<!-- SpendableLift -->
+<g id="node-SpendableLift" class="node" data-node="SpendableLift" role="button" tabindex="0" aria-label="Inspect SpendableLift">
+<title>SpendableLift</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1868.6,-170.39 1744.82,-170.39 1744.82,-131.03 1868.6,-131.03 1868.6,-170.39"/>
+<text xml:space="preserve" text-anchor="middle" x="1806.71" y="-145.91" font-family="Helvetica,sans-Serif" font-size="16.00">SpendableLift</text>
+</g>
+<!-- QrUnspentInit -->
+<g id="node-QrUnspentInit" class="node" data-node="QrUnspentInit" role="button" tabindex="0" aria-label="Inspect QrUnspentInit">
+<title>QrUnspentInit</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="578.2,-422.39 453.57,-422.39 453.57,-383.03 578.2,-383.03 578.2,-422.39"/>
+<text xml:space="preserve" text-anchor="middle" x="515.89" y="-397.91" font-family="Helvetica,sans-Serif" font-size="16.00">QrUnspentInit</text>
+</g>
+<!-- QrUnspentInit&#45;R -->
+<g id="node12" class="node">
+<title>QrUnspentInit&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="194.45,-420.71 140.45,-420.71 140.45,-384.71 194.45,-384.71 194.45,-420.71"/>
+<text xml:space="preserve" text-anchor="middle" x="167.45" y="-397.01" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;QrUnspentInit -->
+<g id="node13" class="node">
+<title>w&#45;QrUnspentInit</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="591.4,-603.31 440.38,-603.31 440.38,-454.11 591.4,-454.11 591.4,-603.31"/>
+<text xml:space="preserve" text-anchor="start" x="497.55" y="-584.41" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="500.35" y="-561.41" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">value</text>
+<text xml:space="preserve" text-anchor="start" x="503.24" y="-537.81" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">path</text>
+<text xml:space="preserve" text-anchor="start" x="501.44" y="-514.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">roots</text>
+<text xml:space="preserve" text-anchor="start" x="500.36" y="-490.61" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">mask</text>
+<text xml:space="preserve" text-anchor="start" x="453.38" y="-467.01" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">sequence: NfSeqPoly</text>
+</g>
+<!-- QrSpendableInit -->
+<g id="node-QrSpendableInit" class="node" data-node="QrSpendableInit" role="button" tabindex="0" aria-label="Inspect QrSpendableInit">
+<title>QrSpendableInit</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1877.48,-99.39 1735.93,-99.39 1735.93,-60.03 1877.48,-60.03 1877.48,-99.39"/>
+<text xml:space="preserve" text-anchor="middle" x="1806.71" y="-74.91" font-family="Helvetica,sans-Serif" font-size="16.00">QrSpendableInit</text>
+</g>
+<!-- UnspentLift -->
+<g id="node-UnspentLift" class="node" data-node="UnspentLift" role="button" tabindex="0" aria-label="Inspect UnspentLift">
+<title>UnspentLift</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="569.32,-99.39 462.46,-99.39 462.46,-60.03 569.32,-60.03 569.32,-99.39"/>
+<text xml:space="preserve" text-anchor="middle" x="515.89" y="-74.91" font-family="Helvetica,sans-Serif" font-size="16.00">UnspentLift</text>
+</g>
+<!-- w&#45;UnspentLift -->
+<g id="node16" class="node">
+<title>w&#45;UnspentLift</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="604.05,-351.31 427.73,-351.31 427.73,-202.11 604.05,-202.11 604.05,-351.31"/>
+<text xml:space="preserve" text-anchor="start" x="497.55" y="-332.41" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="500.35" y="-309.41" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">value</text>
+<text xml:space="preserve" text-anchor="start" x="503.24" y="-285.81" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">path</text>
+<text xml:space="preserve" text-anchor="start" x="501.44" y="-262.21" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">roots</text>
+<text xml:space="preserve" text-anchor="start" x="500.36" y="-238.61" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">mask</text>
+<text xml:space="preserve" text-anchor="start" x="440.73" y="-215.01" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">extended_seq: NfSeqPoly</text>
+</g>
+</g>
+</svg>

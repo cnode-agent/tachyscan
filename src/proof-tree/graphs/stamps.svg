@@ -1,0 +1,522 @@
+<svg role="group" aria-label="Proof types and their dependencies"
+ viewBox="0.00 0.00 1965.00 1000.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 975.09)">
+<!-- Actions&#45;&gt;FeeFuse -->
+<g id="edge25" class="edge">
+<title>Actions&#45;&gt;FeeFuse</title>
+<path fill="none" stroke="#44413b" d="M1214.51,-674.8C1264.89,-674.8 1321.12,-674.8 1360.94,-674.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="1360.91,-677.25 1367.91,-674.8 1360.91,-672.35 1360.91,-677.25"/>
+<text xml:space="preserve" text-anchor="middle" x="1351.3" y="-679.95" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- Actions&#45;&gt;ActionMerge -->
+<g id="edge29" class="edge">
+<title>Actions&#45;&gt;ActionMerge</title>
+<path fill="none" stroke="#44413b" d="M976.36,-674.8C938.21,-674.8 897.29,-674.8 864.37,-674.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="864.69,-672.35 857.69,-674.8 864.69,-677.25 864.69,-672.35"/>
+<text xml:space="preserve" text-anchor="middle" x="874.31" y="-663.05" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- Actions&#45;&gt;ActionMerge -->
+<g id="edge30" class="edge">
+<title>Actions&#45;&gt;ActionMerge</title>
+<path fill="none" stroke="#44413b" d="M981.53,-698.19C941.9,-699.59 898.71,-698.57 864.28,-695.12"/>
+<polygon fill="#44413b" stroke="#44413b" points="864.91,-692.73 857.68,-694.41 864.38,-697.6 864.91,-692.73"/>
+<text xml:space="preserve" text-anchor="middle" x="875.11" y="-684.49" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- Actions&#45;&gt;ActionLift -->
+<g id="edge33" class="edge">
+<title>Actions&#45;&gt;ActionLift</title>
+<path fill="none" stroke="#44413b" d="M989.64,-711.5C943.19,-723.69 890.52,-735.66 852.3,-742.45"/>
+<polygon fill="#44413b" stroke="#44413b" points="852.35,-739.95 845.87,-743.56 853.18,-744.78 852.35,-739.95"/>
+<text xml:space="preserve" text-anchor="middle" x="860.8" y="-729.1" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- AnchorSpan&#45;&gt;StampLift -->
+<g id="edge14" class="edge">
+<title>AnchorSpan&#45;&gt;StampLift</title>
+<path fill="none" stroke="#44413b" d="M619.01,-783.43C763.5,-786.34 1005.98,-787.55 1213.78,-770.8 1263.07,-766.83 1318.9,-759.61 1358.99,-753.95"/>
+<polygon fill="#44413b" stroke="#44413b" points="1359.21,-756.39 1365.8,-752.98 1358.52,-751.54 1359.21,-756.39"/>
+<text xml:space="preserve" text-anchor="middle" x="1350.54" y="-760.39" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- AnchorSpan&#45;&gt;AnchorSpanFuse -->
+<g id="edge21" class="edge">
+<title>AnchorSpan&#45;&gt;AnchorSpanFuse</title>
+<path fill="none" stroke="#44413b" d="M373.02,-812.64C344.88,-820.57 315.43,-828.87 289.39,-836.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="288.95,-833.79 282.88,-838.05 290.28,-838.5 288.95,-833.79"/>
+<text xml:space="preserve" text-anchor="middle" x="296.57" y="-822.1" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- AnchorSpan&#45;&gt;AnchorSpanFuse -->
+<g id="edge22" class="edge">
+<title>AnchorSpan&#45;&gt;AnchorSpanFuse</title>
+<path fill="none" stroke="#44413b" d="M390.79,-830.68C358.44,-841.33 322.85,-851.05 291.82,-857.63"/>
+<polygon fill="#44413b" stroke="#44413b" points="291.46,-855.2 285.1,-859.01 292.45,-860 291.46,-855.2"/>
+<text xml:space="preserve" text-anchor="middle" x="299.67" y="-844.08" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- AnchorSpan&#45;&gt;ActionLift -->
+<g id="edge34" class="edge">
+<title>AnchorSpan&#45;&gt;ActionLift</title>
+<path fill="none" stroke="#44413b" d="M617.06,-765.82C661.06,-760.92 708.17,-755.68 743.12,-751.78"/>
+<polygon fill="#44413b" stroke="#44413b" points="743.1,-754.25 749.78,-751.04 742.55,-749.38 743.1,-754.25"/>
+<text xml:space="preserve" text-anchor="middle" x="734.21" y="-757.98" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- OutputHeader&#45;&gt;OutputAction -->
+<g id="edge1" class="edge">
+<title>OutputHeader&#45;&gt;OutputAction</title>
+<path fill="none" stroke="#44413b" d="M584.82,-526.14C631.67,-518.77 687.36,-510.01 729.91,-503.32"/>
+<polygon fill="#44413b" stroke="#44413b" points="730.21,-505.76 736.74,-502.25 729.45,-500.92 730.21,-505.76"/>
+<text xml:space="preserve" text-anchor="middle" x="721.65" y="-509.88" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- SpendHeader&#45;&gt;SpendAction -->
+<g id="edge5" class="edge">
+<title>SpendHeader&#45;&gt;SpendAction</title>
+<path fill="none" stroke="#44413b" d="M608.29,-270.36C649.74,-269.14 694.94,-267.8 730.69,-266.75"/>
+<polygon fill="#44413b" stroke="#44413b" points="730.66,-269.2 737.58,-266.55 730.51,-264.3 730.66,-269.2"/>
+<text xml:space="preserve" text-anchor="middle" x="721.23" y="-272.19" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- Stamp&#45;&gt;StampMerge -->
+<g id="edge9" class="edge">
+<title>Stamp&#45;&gt;StampMerge</title>
+<path fill="none" stroke="#44413b" d="M1707.04,-749.06C1668.25,-796.46 1612.32,-855.59 1550.46,-891.8 1529.78,-903.9 1504.97,-912.02 1482.29,-917.44"/>
+<polygon fill="#44413b" stroke="#44413b" points="1481.81,-915.03 1475.52,-918.97 1482.89,-919.81 1481.81,-915.03"/>
+<text xml:space="preserve" text-anchor="middle" x="1489.85" y="-903.75" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- Stamp&#45;&gt;StampMerge -->
+<g id="edge10" class="edge">
+<title>Stamp&#45;&gt;StampMerge</title>
+<path fill="none" stroke="#44413b" d="M1724.08,-752.14C1685.76,-809.22 1622.08,-881.88 1550.46,-923.8 1518.62,-942.43 1476.96,-951.64 1448.42,-949.3"/>
+<polygon fill="#44413b" stroke="#44413b" points="1448.77,-946.88 1441.51,-948.4 1448.13,-951.74 1448.77,-946.88"/>
+<text xml:space="preserve" text-anchor="middle" x="1459.07" y="-938.87" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- Stamp&#45;&gt;StampLift -->
+<g id="edge13" class="edge">
+<title>Stamp&#45;&gt;StampLift</title>
+<path fill="none" stroke="#44413b" d="M1632.74,-712.94C1576.52,-725.38 1513.69,-737.38 1470.14,-743.65"/>
+<polygon fill="#44413b" stroke="#44413b" points="1470.06,-741.19 1463.47,-744.58 1470.74,-746.04 1470.06,-741.19"/>
+<text xml:space="preserve" text-anchor="middle" x="1478.76" y="-730.61" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- Stamp&#45;&gt;StampUnmerge -->
+<g id="edge40" class="edge">
+<title>Stamp&#45;&gt;StampUnmerge</title>
+<path fill="none" stroke="#44413b" d="M1667.56,-613.25C1631.91,-591.93 1590.32,-569.28 1550.46,-552.8 1532.14,-545.23 1511.75,-538.82 1492.5,-533.6"/>
+<polygon fill="#44413b" stroke="#44413b" points="1493.18,-531.25 1485.79,-531.83 1491.93,-535.98 1493.18,-531.25"/>
+<text xml:space="preserve" text-anchor="middle" x="1504.01" y="-524.6" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- Stamp&#45;&gt;StampUnmerge -->
+<g id="edge41" class="edge">
+<title>Stamp&#45;&gt;StampUnmerge</title>
+<path fill="none" stroke="#44413b" d="M1641.16,-628.99C1612.18,-613.49 1580.82,-597.35 1550.46,-584.8 1510.75,-568.38 1461.35,-557.44 1434.74,-541.62"/>
+<polygon fill="#44413b" stroke="#44413b" points="1436.31,-539.72 1429.13,-537.87 1433.58,-543.8 1436.31,-539.72"/>
+<text xml:space="preserve" text-anchor="middle" x="1447.63" y="-536.78" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- OutputAction&#45;&gt;Actions -->
+<g id="edge3" class="edge">
+<title>OutputAction&#45;&gt;Actions</title>
+<path fill="none" stroke="#44413b" d="M857.78,-507.08C875.75,-512.6 895.19,-519.8 912,-528.8 917.93,-531.98 966.76,-571.12 1012.4,-608.08"/>
+<polygon fill="#44413b" stroke="#44413b" points="1010.66,-609.82 1017.64,-612.32 1013.74,-606.01 1010.66,-609.82"/>
+</g>
+<!-- OutputAction&#45;R&#45;&gt;OutputAction -->
+<g id="edge2" class="edge">
+<title>OutputAction&#45;R&#45;&gt;OutputAction</title>
+<path fill="none" stroke="#44413b" d="M517.33,-448.85C563.72,-456.14 662.67,-471.7 729.5,-482.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="729.1,-484.63 736.39,-483.29 729.86,-479.79 729.1,-484.63"/>
+<text xml:space="preserve" text-anchor="middle" x="733.91" y="-473.63" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;OutputAction&#45;&gt;OutputAction -->
+<g id="edge4" class="edge">
+<title>w&#45;OutputAction&#45;&gt;OutputAction</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M797.85,-441.59C797.85,-449.13 797.85,-456.67 797.85,-464.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="795.4,-463.88 797.85,-470.88 800.3,-463.88 795.4,-463.88"/>
+</g>
+<!-- SpendAction&#45;&gt;Actions -->
+<g id="edge7" class="edge">
+<title>SpendAction&#45;&gt;Actions</title>
+<path fill="none" stroke="#44413b" d="M856.9,-270.9C876.84,-275.78 897.7,-284.45 912,-299.8 998.77,-392.97 909.68,-470.73 977,-578.8 984.63,-591.06 994.38,-602.47 1004.99,-612.83"/>
+<polygon fill="#44413b" stroke="#44413b" points="1003.1,-614.41 1009.87,-617.44 1006.47,-610.85 1003.1,-614.41"/>
+</g>
+<!-- SpendAction&#45;R&#45;&gt;SpendAction -->
+<g id="edge6" class="edge">
+<title>SpendAction&#45;R&#45;&gt;SpendAction</title>
+<path fill="none" stroke="#44413b" d="M517.46,-165.87C543.55,-171.41 584.72,-181.32 618.69,-194.8 649.19,-206.9 653.43,-217.11 683.69,-229.8 698.63,-236.06 715.09,-241.78 730.72,-246.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="729.94,-249.03 737.36,-248.76 731.39,-244.35 729.94,-249.03"/>
+<text xml:space="preserve" text-anchor="middle" x="734.83" y="-239.31" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;SpendAction&#45;&gt;SpendAction -->
+<g id="edge8" class="edge">
+<title>w&#45;SpendAction&#45;&gt;SpendAction</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M797.85,-213.59C797.85,-221.13 797.85,-228.67 797.85,-236.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="795.4,-235.88 797.85,-242.88 800.3,-235.88 795.4,-235.88"/>
+</g>
+<!-- StampMerge&#45;&gt;Stamp -->
+<g id="edge11" class="edge">
+<title>StampMerge&#45;&gt;Stamp</title>
+<path fill="none" stroke="#44413b" d="M1429.96,-907.57C1455.69,-891.62 1510.72,-883.05 1550.46,-859.8 1599.7,-830.98 1645.18,-787.63 1681.25,-749.68"/>
+<polygon fill="#44413b" stroke="#44413b" points="1682.89,-751.5 1685.92,-744.73 1679.33,-748.14 1682.89,-751.5"/>
+</g>
+<!-- w&#45;StampMerge&#45;&gt;StampMerge -->
+<g id="edge12" class="edge">
+<title>w&#45;StampMerge&#45;&gt;StampMerge</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1414.62,-875.9C1414.62,-883.64 1414.62,-891.38 1414.62,-899.13"/>
+<polygon fill="#44413b" stroke="#44413b" points="1412.17,-899.01 1414.62,-906.01 1417.07,-899.01 1412.17,-899.01"/>
+</g>
+<!-- StampLift&#45;&gt;Stamp -->
+<g id="edge15" class="edge">
+<title>StampLift&#45;&gt;Stamp</title>
+<path fill="none" stroke="#44413b" d="M1461.97,-727.81C1500.19,-717.27 1556.66,-704.56 1610.33,-693.97"/>
+<polygon fill="#44413b" stroke="#44413b" points="1610.69,-696.4 1617.09,-692.65 1609.75,-691.59 1610.69,-696.4"/>
+</g>
+<!-- w&#45;StampLift&#45;&gt;StampLift -->
+<g id="edge16" class="edge">
+<title>w&#45;StampLift&#45;&gt;StampLift</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1328.15,-603.79C1296.37,-611.6 1263.86,-626.53 1246.28,-654.8 1236.88,-669.89 1236.88,-679.71 1246.28,-694.8 1269.4,-731.96 1319.38,-743.49 1358.91,-746.45"/>
+<polygon fill="#44413b" stroke="#44413b" points="1358.53,-748.88 1365.67,-746.87 1358.83,-743.99 1358.53,-748.88"/>
+</g>
+<!-- AnchorSpanSeed&#45;&gt;AnchorSpan -->
+<g id="edge19" class="edge">
+<title>AnchorSpanSeed&#45;&gt;AnchorSpan</title>
+<path fill="none" stroke="#44413b" d="M281.42,-721.14C306.93,-728.33 336.39,-736.64 364.99,-744.69"/>
+<polygon fill="#44413b" stroke="#44413b" points="364.16,-747.01 371.57,-746.55 365.49,-742.29 364.16,-747.01"/>
+</g>
+<!-- AnchorSpanSeed&#45;L&#45;&gt;AnchorSpanSeed -->
+<g id="edge17" class="edge">
+<title>AnchorSpanSeed&#45;L&#45;&gt;AnchorSpanSeed</title>
+<path fill="none" stroke="#44413b" d="M53.68,-729.93C72.19,-726.42 98.31,-721.46 123.76,-716.63"/>
+<polygon fill="#44413b" stroke="#44413b" points="124.08,-719.07 130.5,-715.35 123.17,-714.25 124.08,-719.07"/>
+<text xml:space="preserve" text-anchor="middle" x="128.93" y="-705.17" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- AnchorSpanSeed&#45;R&#45;&gt;AnchorSpanSeed -->
+<g id="edge18" class="edge">
+<title>AnchorSpanSeed&#45;R&#45;&gt;AnchorSpanSeed</title>
+<path fill="none" stroke="#44413b" d="M53.68,-671.67C72.19,-675.18 98.31,-680.14 123.76,-684.97"/>
+<polygon fill="#44413b" stroke="#44413b" points="123.17,-687.35 130.5,-686.25 124.08,-682.53 123.17,-687.35"/>
+<text xml:space="preserve" text-anchor="middle" x="128.02" y="-676.63" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;AnchorSpanSeed&#45;&gt;AnchorSpanSeed -->
+<g id="edge20" class="edge">
+<title>w&#45;AnchorSpanSeed&#45;&gt;AnchorSpanSeed</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M208.22,-648.5C208.22,-656.48 208.22,-664.47 208.22,-672.45"/>
+<polygon fill="#44413b" stroke="#44413b" points="205.77,-672.26 208.22,-679.26 210.67,-672.26 205.77,-672.26"/>
+</g>
+<!-- AnchorSpanFuse&#45;&gt;AnchorSpan -->
+<g id="edge23" class="edge">
+<title>AnchorSpanFuse&#45;&gt;AnchorSpan</title>
+<path fill="none" stroke="#44413b" d="M232.16,-838.43C259.61,-823.68 307.8,-806.75 355.12,-793.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="355.74,-796.07 361.86,-791.88 354.46,-791.35 355.74,-796.07"/>
+</g>
+<!-- w&#45;AnchorSpanFuse&#45;&gt;AnchorSpanFuse -->
+<g id="edge24" class="edge">
+<title>w&#45;AnchorSpanFuse&#45;&gt;AnchorSpanFuse</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M208.22,-806.96C208.22,-814.69 208.22,-822.42 208.22,-830.16"/>
+<polygon fill="#44413b" stroke="#44413b" points="205.77,-830.03 208.22,-837.03 210.67,-830.04 205.77,-830.03"/>
+</g>
+<!-- FeeFuse&#45;&gt;Stamp -->
+<g id="edge27" class="edge">
+<title>FeeFuse&#45;&gt;Stamp</title>
+<path fill="none" stroke="#44413b" d="M1459.84,-674.8C1497.22,-674.8 1553.1,-674.8 1606.67,-674.8"/>
+<polygon fill="#44413b" stroke="#44413b" points="1606.39,-677.25 1613.39,-674.8 1606.39,-672.35 1606.39,-677.25"/>
+</g>
+<!-- FeeFuse&#45;R&#45;&gt;FeeFuse -->
+<g id="edge26" class="edge">
+<title>FeeFuse&#45;R&#45;&gt;FeeFuse</title>
+<path fill="none" stroke="#44413b" d="M1121.99,-548.69C1146.71,-553.24 1184.58,-562.33 1213.78,-578.8 1248.02,-598.12 1244.33,-619.84 1278.78,-638.8 1304.15,-652.77 1335.24,-661.54 1361.16,-666.93"/>
+<polygon fill="#44413b" stroke="#44413b" points="1360.56,-669.3 1367.9,-668.26 1361.51,-664.5 1360.56,-669.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1365.41" y="-658.66" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;FeeFuse&#45;&gt;FeeFuse -->
+<g id="edge28" class="edge">
+<title>w&#45;FeeFuse&#45;&gt;FeeFuse</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1279.07,-120.52C1266.08,-131.11 1254.65,-143.46 1246.28,-157.8 1220.22,-202.42 1218.98,-578.93 1246.28,-622.8 1269.89,-660.74 1321.38,-672.31 1361.24,-675.26"/>
+<polygon fill="#44413b" stroke="#44413b" points="1360.91,-677.69 1368.04,-675.67 1361.2,-672.8 1360.91,-677.69"/>
+</g>
+<!-- ActionMerge&#45;&gt;Actions -->
+<g id="edge31" class="edge">
+<title>ActionMerge&#45;&gt;Actions</title>
+<path fill="none" stroke="#44413b" d="M856.18,-655.35C889.47,-651.48 932.72,-650.08 973.21,-651.15"/>
+<polygon fill="#44413b" stroke="#44413b" points="972.95,-653.59 980.02,-651.36 973.1,-648.69 972.95,-653.59"/>
+</g>
+<!-- w&#45;ActionMerge&#45;&gt;ActionMerge -->
+<g id="edge32" class="edge">
+<title>w&#45;ActionMerge&#45;&gt;ActionMerge</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M797.85,-622.9C797.85,-630.64 797.85,-638.38 797.85,-646.13"/>
+<polygon fill="#44413b" stroke="#44413b" points="795.4,-646.01 797.85,-653.01 800.3,-646.01 795.4,-646.01"/>
+</g>
+<!-- ActionLift&#45;&gt;Actions -->
+<g id="edge35" class="edge">
+<title>ActionLift&#45;&gt;Actions</title>
+<path fill="none" stroke="#44413b" d="M844.38,-725.91C878.21,-715.31 926.07,-702.84 970.87,-692.62"/>
+<polygon fill="#44413b" stroke="#44413b" points="971.14,-695.07 977.43,-691.14 970.06,-690.29 971.14,-695.07"/>
+</g>
+<!-- FeeSeed&#45;&gt;Stamp -->
+<g id="edge38" class="edge">
+<title>FeeSeed&#45;&gt;Stamp</title>
+<path fill="none" stroke="#44413b" d="M1460.5,-338.88C1488.45,-343.23 1523.98,-352.22 1550.46,-370.8 1629.17,-426.03 1688.1,-520.48 1723.51,-589.48"/>
+<polygon fill="#44413b" stroke="#44413b" points="1721.25,-590.43 1726.6,-595.56 1725.61,-588.21 1721.25,-590.43"/>
+</g>
+<!-- FeeSeed&#45;L&#45;&gt;FeeSeed -->
+<g id="edge36" class="edge">
+<title>FeeSeed&#45;L&#45;&gt;FeeSeed</title>
+<path fill="none" stroke="#44413b" d="M1122.35,-366.02C1174.18,-360.46 1291.41,-347.9 1360.3,-340.51"/>
+<polygon fill="#44413b" stroke="#44413b" points="1360.25,-342.98 1366.95,-339.8 1359.73,-338.11 1360.25,-342.98"/>
+<text xml:space="preserve" text-anchor="middle" x="1365.39" y="-329.74" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- FeeSeed&#45;R&#45;&gt;FeeSeed -->
+<g id="edge37" class="edge">
+<title>FeeSeed&#45;R&#45;&gt;FeeSeed</title>
+<path fill="none" stroke="#44413b" d="M1122.35,-303.58C1174.18,-309.14 1291.41,-321.7 1360.3,-329.09"/>
+<polygon fill="#44413b" stroke="#44413b" points="1359.73,-331.49 1366.95,-329.8 1360.25,-326.62 1359.73,-331.49"/>
+<text xml:space="preserve" text-anchor="middle" x="1364.48" y="-320.06" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;FeeSeed&#45;&gt;FeeSeed -->
+<g id="edge39" class="edge">
+<title>w&#45;FeeSeed&#45;&gt;FeeSeed</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1414.62,-283.59C1414.62,-291.13 1414.62,-298.67 1414.62,-306.21"/>
+<polygon fill="#44413b" stroke="#44413b" points="1412.17,-305.88 1414.62,-312.88 1417.07,-305.88 1412.17,-305.88"/>
+</g>
+<!-- StampUnmerge&#45;&gt;Stamp -->
+<g id="edge42" class="edge">
+<title>StampUnmerge&#45;&gt;Stamp</title>
+<path fill="none" stroke="#44413b" d="M1484.33,-501C1505.89,-505.01 1529.52,-512.14 1550.46,-520.8 1598.79,-540.78 1649.66,-569.84 1689.4,-598.16"/>
+<polygon fill="#44413b" stroke="#44413b" points="1687.85,-600.06 1694.96,-602.18 1690.72,-596.09 1687.85,-600.06"/>
+</g>
+<!-- w&#45;StampUnmerge&#45;&gt;StampUnmerge -->
+<g id="edge43" class="edge">
+<title>w&#45;StampUnmerge&#45;&gt;StampUnmerge</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M1414.62,-464.9C1414.62,-472.64 1414.62,-480.38 1414.62,-488.13"/>
+<polygon fill="#44413b" stroke="#44413b" points="1412.17,-488.01 1414.62,-495.01 1417.07,-488.01 1412.17,-488.01"/>
+</g>
+<!-- Actions -->
+<g id="node-Actions" class="node" data-node="Actions" role="button" tabindex="0" aria-label="Inspect Actions">
+<title>Actions</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="1095.39" cy="-674.8" rx="118.39" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="1067.51" y="-705.1" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">Actions</text>
+<text xml:space="preserve" text-anchor="start" x="1075.51" y="-680.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor</text>
+<text xml:space="preserve" text-anchor="start" x="1042.64" y="-656.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1028.19" y="-633.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- AnchorSpan -->
+<g id="node-AnchorSpan" class="node" data-node="AnchorSpan" role="button" tabindex="0" aria-label="Inspect AnchorSpan">
+<title>AnchorSpan</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="490.57" cy="-779.8" rx="128.12" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="443.79" y="-810.1" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">AnchorSpan</text>
+<text xml:space="preserve" text-anchor="start" x="416.49" y="-785.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor_start, anchor_end</text>
+<text xml:space="preserve" text-anchor="start" x="435.29" y="-761.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: AnchorSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="423.38" y="-738.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- OutputHeader -->
+<g id="node-OutputHeader" class="node" data-node="OutputHeader" role="button" tabindex="0" aria-label="Inspect OutputHeader">
+<title>OutputHeader</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="490.57" cy="-540.8" rx="98.87" ry="46.33"/>
+<text xml:space="preserve" text-anchor="start" x="437.17" y="-547.5" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">OutputHeader</text>
+<text xml:space="preserve" text-anchor="start" x="457.34" y="-522.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, pad, cv</text>
+</g>
+<!-- SpendHeader -->
+<g id="node-SpendHeader" class="node" data-node="SpendHeader" role="button" tabindex="0" aria-label="Inspect SpendHeader">
+<title>SpendHeader</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="490.57" cy="-273.8" rx="117.37" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="438.11" y="-292.3" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">SpendHeader</text>
+<text xml:space="preserve" text-anchor="start" x="424.09" y="-267.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">cm, nf_current, nf_next</text>
+<text xml:space="preserve" text-anchor="start" x="450.11" y="-243.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor, pk, cv</text>
+</g>
+<!-- Stamp -->
+<g id="node-Stamp" class="node" data-node="Stamp" role="button" tabindex="0" aria-label="Inspect Stamp">
+<title>Stamp</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="1762.99" cy="-674.8" rx="147.53" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="1738.42" y="-705.1" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">Stamp</text>
+<text xml:space="preserve" text-anchor="start" x="1675.19" y="-680.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">tachygram_set_bridge, anchor</text>
+<text xml:space="preserve" text-anchor="start" x="1710.24" y="-656.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O0: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1695.79" y="-633.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- OutputAction -->
+<g id="node-OutputAction" class="node" data-node="OutputAction" role="button" tabindex="0" aria-label="Inspect OutputAction">
+<title>OutputAction</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="857.06,-512.48 738.64,-512.48 738.64,-473.12 857.06,-473.12 857.06,-512.48"/>
+<text xml:space="preserve" text-anchor="middle" x="797.85" y="-488" font-family="Helvetica,sans-Serif" font-size="16.00">OutputAction</text>
+</g>
+<!-- OutputAction&#45;R -->
+<g id="node7" class="node">
+<title>OutputAction&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="517.57,-462.8 463.57,-462.8 463.57,-426.8 517.57,-426.8 517.57,-462.8"/>
+<text xml:space="preserve" text-anchor="middle" x="490.57" y="-439.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;OutputAction -->
+<g id="node8" class="node">
+<title>w&#45;OutputAction</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="912,-441.6 683.69,-441.6 683.69,-316 912,-316 912,-441.6"/>
+<text xml:space="preserve" text-anchor="start" x="779.51" y="-422.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="783.39" y="-399.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">theta</text>
+<text xml:space="preserve" text-anchor="start" x="777.97" y="-376.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor</text>
+<text xml:space="preserve" text-anchor="start" x="724.14" y="-352.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="696.69" y="-328.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- SpendAction -->
+<g id="node-SpendAction" class="node" data-node="SpendAction" role="button" tabindex="0" aria-label="Inspect SpendAction">
+<title>SpendAction</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="856.17,-284.48 739.52,-284.48 739.52,-245.12 856.17,-245.12 856.17,-284.48"/>
+<text xml:space="preserve" text-anchor="middle" x="797.85" y="-260" font-family="Helvetica,sans-Serif" font-size="16.00">SpendAction</text>
+</g>
+<!-- SpendAction&#45;R -->
+<g id="node10" class="node">
+<title>SpendAction&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="517.57,-178.8 463.57,-178.8 463.57,-142.8 517.57,-142.8 517.57,-178.8"/>
+<text xml:space="preserve" text-anchor="middle" x="490.57" y="-155.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;SpendAction -->
+<g id="node11" class="node">
+<title>w&#45;SpendAction</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="912,-213.6 683.69,-213.6 683.69,-88 912,-88 912,-213.6"/>
+<text xml:space="preserve" text-anchor="start" x="779.51" y="-194.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="783.39" y="-171.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">theta</text>
+<text xml:space="preserve" text-anchor="start" x="787.37" y="-148.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">pak</text>
+<text xml:space="preserve" text-anchor="start" x="724.14" y="-124.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="696.69" y="-100.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- StampMerge -->
+<g id="node-StampMerge" class="node" data-node="StampMerge" role="button" tabindex="0" aria-label="Inspect StampMerge">
+<title>StampMerge</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1473.37,-947.48 1355.86,-947.48 1355.86,-908.12 1473.37,-908.12 1473.37,-947.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1414.62" y="-923" font-family="Helvetica,sans-Serif" font-size="16.00">StampMerge</text>
+</g>
+<!-- w&#45;StampMerge -->
+<g id="node13" class="node">
+<title>w&#45;StampMerge</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1528.77,-876 1300.46,-876 1300.46,-797.6 1528.77,-797.6 1528.77,-876"/>
+<text xml:space="preserve" text-anchor="start" x="1396.28" y="-857.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1340.91" y="-834.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1313.46" y="-810.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- StampLift -->
+<g id="node-StampLift" class="node" data-node="StampLift" role="button" tabindex="0" aria-label="Inspect StampLift">
+<title>StampLift</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1461.37,-765.48 1367.86,-765.48 1367.86,-726.12 1461.37,-726.12 1461.37,-765.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1414.62" y="-741" font-family="Helvetica,sans-Serif" font-size="16.00">StampLift</text>
+</g>
+<!-- w&#45;StampLift -->
+<g id="node15" class="node">
+<title>w&#45;StampLift</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1501.32,-623.2 1327.91,-623.2 1327.91,-568.4 1501.32,-568.4 1501.32,-623.2"/>
+<text xml:space="preserve" text-anchor="start" x="1396.28" y="-604.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1340.91" y="-581.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+</g>
+<!-- AnchorSpanSeed -->
+<g id="node-AnchorSpanSeed" class="node" data-node="AnchorSpanSeed" role="button" tabindex="0" aria-label="Inspect AnchorSpanSeed">
+<title>AnchorSpanSeed</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="283.9,-720.48 132.55,-720.48 132.55,-681.12 283.9,-681.12 283.9,-720.48"/>
+<text xml:space="preserve" text-anchor="middle" x="208.22" y="-696" font-family="Helvetica,sans-Serif" font-size="16.00">AnchorSpanSeed</text>
+</g>
+<!-- AnchorSpanSeed&#45;L -->
+<g id="node17" class="node">
+<title>AnchorSpanSeed&#45;L</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="54,-752.8 0,-752.8 0,-716.8 54,-716.8 54,-752.8"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-729.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- AnchorSpanSeed&#45;R -->
+<g id="node18" class="node">
+<title>AnchorSpanSeed&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="54,-684.8 0,-684.8 0,-648.8 54,-648.8 54,-684.8"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-661.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;AnchorSpanSeed -->
+<g id="node19" class="node">
+<title>w&#45;AnchorSpanSeed</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="297.45,-648.8 119,-648.8 119,-546.8 297.45,-546.8 297.45,-648.8"/>
+<text xml:space="preserve" text-anchor="start" x="189.88" y="-629.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="172.09" y="-606.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor_start</text>
+<text xml:space="preserve" text-anchor="start" x="190.51" y="-583.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch</text>
+<text xml:space="preserve" text-anchor="start" x="132" y="-559.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">stamp: TachygramSetPoly</text>
+</g>
+<!-- AnchorSpanFuse -->
+<g id="node-AnchorSpanFuse" class="node" data-node="AnchorSpanFuse" role="button" tabindex="0" aria-label="Inspect AnchorSpanFuse">
+<title>AnchorSpanFuse</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="283,-878.48 133.45,-878.48 133.45,-839.12 283,-839.12 283,-878.48"/>
+<text xml:space="preserve" text-anchor="middle" x="208.22" y="-854" font-family="Helvetica,sans-Serif" font-size="16.00">AnchorSpanFuse</text>
+</g>
+<!-- w&#45;AnchorSpanFuse -->
+<g id="node21" class="node">
+<title>w&#45;AnchorSpanFuse</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="296.01,-807.2 120.43,-807.2 120.43,-752.4 296.01,-752.4 296.01,-807.2"/>
+<text xml:space="preserve" text-anchor="start" x="189.88" y="-788.3" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="133.43" y="-765.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">combined: AnchorSetPoly</text>
+</g>
+<!-- FeeFuse -->
+<g id="node-FeeFuse" class="node" data-node="FeeFuse" role="button" tabindex="0" aria-label="Inspect FeeFuse">
+<title>FeeFuse</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1459.15,-694.48 1370.08,-694.48 1370.08,-655.12 1459.15,-655.12 1459.15,-694.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1414.62" y="-670" font-family="Helvetica,sans-Serif" font-size="16.00">FeeFuse</text>
+</g>
+<!-- FeeFuse&#45;R -->
+<g id="node23" class="node">
+<title>FeeFuse&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1122.39,-562.8 1068.39,-562.8 1068.39,-526.8 1122.39,-526.8 1122.39,-562.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1095.39" y="-539.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;FeeFuse -->
+<g id="node24" class="node">
+<title>w&#45;FeeFuse</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1550.46,-125.6 1278.78,-125.6 1278.78,0 1550.46,0 1550.46,-125.6"/>
+<text xml:space="preserve" text-anchor="start" x="1396.28" y="-106.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1373.42" y="-83.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">max_fee_note</text>
+<text xml:space="preserve" text-anchor="start" x="1405.58" y="-60.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">fee</text>
+<text xml:space="preserve" text-anchor="start" x="1319.22" y="-36.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">output_action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1291.78" y="-12.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">output_tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- ActionMerge -->
+<g id="node-ActionMerge" class="node" data-node="ActionMerge" role="button" tabindex="0" aria-label="Inspect ActionMerge">
+<title>ActionMerge</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="855.72,-694.48 739.98,-694.48 739.98,-655.12 855.72,-655.12 855.72,-694.48"/>
+<text xml:space="preserve" text-anchor="middle" x="797.85" y="-670" font-family="Helvetica,sans-Serif" font-size="16.00">ActionMerge</text>
+</g>
+<!-- w&#45;ActionMerge -->
+<g id="node26" class="node">
+<title>w&#45;ActionMerge</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="912,-623 683.69,-623 683.69,-544.6 912,-544.6 912,-623"/>
+<text xml:space="preserve" text-anchor="start" x="779.51" y="-604.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="724.14" y="-581.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="696.69" y="-557.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- ActionLift -->
+<g id="node-ActionLift" class="node" data-node="ActionLift" role="button" tabindex="0" aria-label="Inspect ActionLift">
+<title>ActionLift</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="843.71,-765.48 751.98,-765.48 751.98,-726.12 843.71,-726.12 843.71,-765.48"/>
+<text xml:space="preserve" text-anchor="middle" x="797.85" y="-741" font-family="Helvetica,sans-Serif" font-size="16.00">ActionLift</text>
+</g>
+<!-- FeeSeed -->
+<g id="node-FeeSeed" class="node" data-node="FeeSeed" role="button" tabindex="0" aria-label="Inspect FeeSeed">
+<title>FeeSeed</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1460.04,-354.48 1369.19,-354.48 1369.19,-315.12 1460.04,-315.12 1460.04,-354.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1414.62" y="-330" font-family="Helvetica,sans-Serif" font-size="16.00">FeeSeed</text>
+</g>
+<!-- FeeSeed&#45;L -->
+<g id="node29" class="node">
+<title>FeeSeed&#45;L</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1122.39,-386.8 1068.39,-386.8 1068.39,-350.8 1122.39,-350.8 1122.39,-386.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1095.39" y="-363.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- FeeSeed&#45;R -->
+<g id="node30" class="node">
+<title>FeeSeed&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1122.39,-318.8 1068.39,-318.8 1068.39,-282.8 1122.39,-282.8 1122.39,-318.8"/>
+<text xml:space="preserve" text-anchor="middle" x="1095.39" y="-295.1" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;FeeSeed -->
+<g id="node31" class="node">
+<title>w&#45;FeeSeed</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1541.42,-283.6 1287.81,-283.6 1287.81,-158 1541.42,-158 1541.42,-283.6"/>
+<text xml:space="preserve" text-anchor="start" x="1396.28" y="-264.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1373.42" y="-241.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">max_fee_note</text>
+<text xml:space="preserve" text-anchor="start" x="1394.74" y="-218.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">anchor</text>
+<text xml:space="preserve" text-anchor="start" x="1328.26" y="-194.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">fee_action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1300.81" y="-170.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">fee_tachygram_set: TachygramSetPoly</text>
+</g>
+<!-- StampUnmerge -->
+<g id="node-StampUnmerge" class="node" data-node="StampUnmerge" role="button" tabindex="0" aria-label="Inspect StampUnmerge">
+<title>StampUnmerge</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1483.6,-536.48 1345.63,-536.48 1345.63,-497.12 1483.6,-497.12 1483.6,-536.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1414.62" y="-512" font-family="Helvetica,sans-Serif" font-size="16.00">StampUnmerge</text>
+</g>
+<!-- w&#45;StampUnmerge -->
+<g id="node33" class="node">
+<title>w&#45;StampUnmerge</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="1528.77,-465 1300.46,-465 1300.46,-386.6 1528.77,-386.6 1528.77,-465"/>
+<text xml:space="preserve" text-anchor="start" x="1396.28" y="-446.1" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="1340.91" y="-423.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">action_set: ActionSetPoly</text>
+<text xml:space="preserve" text-anchor="start" x="1313.46" y="-399.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">tachygram_set: TachygramSetPoly</text>
+</g>
+</g>
+</svg>

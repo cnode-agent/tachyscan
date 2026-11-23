@@ -1,0 +1,231 @@
+<svg role="group" aria-label="Proof types and their dependencies"
+ viewBox="0.00 0.00 2268.00 549.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 523.31)">
+<!-- EvidenceTree&#45;&gt;EvidenceTreePairFuse -->
+<g id="edge1" class="edge">
+<title>EvidenceTree&#45;&gt;EvidenceTreePairFuse</title>
+<path fill="none" stroke="#44413b" d="M692.98,-143.67C714.63,-145.89 736.57,-148.24 757.42,-150.4 989.15,-174.43 1261.45,-199.85 1405.86,-218.49"/>
+<polygon fill="#44413b" stroke="#44413b" points="1405.15,-220.87 1412.41,-219.35 1405.78,-216.01 1405.15,-220.87"/>
+<text xml:space="preserve" text-anchor="middle" x="1394.84" y="-222.28" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- EvidenceTree&#45;&gt;EvidenceTreePairFuse -->
+<g id="edge2" class="edge">
+<title>EvidenceTree&#45;&gt;EvidenceTreePairFuse</title>
+<path fill="none" stroke="#44413b" d="M671.87,-172.86C700.17,-176.33 729.74,-179.53 757.42,-182.4 988.92,-206.41 1260.91,-231.8 1405.42,-239.71"/>
+<polygon fill="#44413b" stroke="#44413b" points="1405.28,-242.16 1412.4,-240.08 1405.54,-237.26 1405.28,-242.16"/>
+<text xml:space="preserve" text-anchor="middle" x="1395.36" y="-244.34" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- EvidenceTree&#45;&gt;EvidenceTreeCap -->
+<g id="edge7" class="edge">
+<title>EvidenceTree&#45;&gt;EvidenceTreeCap</title>
+<path fill="none" stroke="#44413b" d="M387.72,-169.62C357.28,-173.28 326.07,-176.42 298.66,-178.54"/>
+<polygon fill="#44413b" stroke="#44413b" points="298.58,-176.09 291.79,-179.05 298.95,-180.98 298.58,-176.09"/>
+<text xml:space="preserve" text-anchor="middle" x="307.72" y="-166.09" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- EvidenceTree&#45;&gt;EvidenceTreeDescend -->
+<g id="edge10" class="edge">
+<title>EvidenceTree&#45;&gt;EvidenceTreeDescend</title>
+<path fill="none" stroke="#44413b" d="M371.95,-135.84C350.33,-133.45 328.72,-130.76 308.74,-127.96"/>
+<polygon fill="#44413b" stroke="#44413b" points="309.35,-125.57 302.07,-127.01 308.65,-130.42 309.35,-125.57"/>
+<text xml:space="preserve" text-anchor="middle" x="319.71" y="-117.69" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- EvidenceTree&#45;&gt;EvidenceTreeOpen -->
+<g id="edge14" class="edge">
+<title>EvidenceTree&#45;&gt;EvidenceTreeOpen</title>
+<path fill="none" stroke="#44413b" d="M576.96,-202.57C618.23,-256.32 684.47,-333.39 757.42,-382.4 764.12,-386.9 771.47,-390.95 779.01,-394.55"/>
+<polygon fill="#44413b" stroke="#44413b" points="777.84,-396.71 785.22,-397.38 779.87,-392.25 777.84,-396.71"/>
+<text xml:space="preserve" text-anchor="middle" x="766.6" y="-394.89" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- EvidenceTreePair&#45;&gt;EvidenceTreeFuse -->
+<g id="edge4" class="edge">
+<title>EvidenceTreePair&#45;&gt;EvidenceTreeFuse</title>
+<path fill="none" stroke="#44413b" d="M1931.36,-204.39C1968.34,-189.83 2009.75,-174.68 2045.38,-162.72"/>
+<polygon fill="#44413b" stroke="#44413b" points="2046.05,-165.08 2051.92,-160.54 2044.51,-160.43 2046.05,-165.08"/>
+<text xml:space="preserve" text-anchor="middle" x="2038.83" y="-170.51" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- EvidenceTreePair&#45;&gt;EvidenceTreeFuse -->
+<g id="edge5" class="edge">
+<title>EvidenceTreePair&#45;&gt;EvidenceTreeFuse</title>
+<path fill="none" stroke="#44413b" d="M1960.36,-216.99C2007.63,-200 2057.65,-180.42 2091.59,-165.19"/>
+<polygon fill="#44413b" stroke="#44413b" points="2092.28,-167.57 2097.63,-162.44 2090.25,-163.11 2092.28,-167.57"/>
+<text xml:space="preserve" text-anchor="middle" x="2086.02" y="-173.72" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- QrBucket&#45;&gt;EvidenceTreeLeafPair -->
+<g id="edge18" class="edge">
+<title>QrBucket&#45;&gt;EvidenceTreeLeafPair</title>
+<path fill="none" stroke="#44413b" d="M1307.23,-365.03C1340.58,-353.3 1376.21,-341.52 1408.04,-331.72"/>
+<polygon fill="#44413b" stroke="#44413b" points="1408.63,-334.11 1414.61,-329.72 1407.2,-329.42 1408.63,-334.11"/>
+<text xml:space="preserve" text-anchor="middle" x="1401.19" y="-339.36" font-family="Helvetica,sans-Serif" font-size="11.00">L</text>
+</g>
+<!-- QrBucket&#45;&gt;EvidenceTreeLeafPair -->
+<g id="edge19" class="edge">
+<title>QrBucket&#45;&gt;EvidenceTreeLeafPair</title>
+<path fill="none" stroke="#44413b" d="M1330.72,-380.8C1378.86,-364.93 1428.74,-347.06 1463.25,-332.94"/>
+<polygon fill="#44413b" stroke="#44413b" points="1463.88,-335.33 1469.41,-330.38 1462.01,-330.8 1463.88,-335.33"/>
+<text xml:space="preserve" text-anchor="middle" x="1457.31" y="-341.26" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- EvidenceTreePairFuse&#45;&gt;EvidenceTreePair -->
+<g id="edge3" class="edge">
+<title>EvidenceTreePairFuse&#45;&gt;EvidenceTreePair</title>
+<path fill="none" stroke="#44413b" d="M1603.85,-242.84C1621.78,-243.69 1641.04,-244.6 1660.46,-245.51"/>
+<polygon fill="#44413b" stroke="#44413b" points="1660.17,-247.95 1667.28,-245.83 1660.41,-243.06 1660.17,-247.95"/>
+</g>
+<!-- EvidenceTreeFuse&#45;&gt;EvidenceTree -->
+<g id="edge6" class="edge">
+<title>EvidenceTreeFuse&#45;&gt;EvidenceTree</title>
+<path fill="none" stroke="#44413b" d="M2053.24,-141.4C1934.75,-141.4 1705.09,-141.4 1509.84,-141.4 1181.06,-141.4 1181.06,-141.4 1181.06,-141.4 1017.98,-141.4 831.82,-141.4 701.01,-141.4"/>
+<polygon fill="#44413b" stroke="#44413b" points="701.38,-138.95 694.38,-141.4 701.38,-143.85 701.38,-138.95"/>
+</g>
+<!-- EvidenceTreeCap&#45;&gt;EvidenceTree -->
+<g id="edge9" class="edge">
+<title>EvidenceTreeCap&#45;&gt;EvidenceTree</title>
+<path fill="none" stroke="#44413b" d="M290.28,-158.3C312.61,-154.83 337.95,-151.44 363.6,-148.43"/>
+<polygon fill="#44413b" stroke="#44413b" points="363.75,-150.88 370.43,-147.64 363.19,-146.01 363.75,-150.88"/>
+</g>
+<!-- EvidenceTreeCap&#45;R&#45;&gt;EvidenceTreeCap -->
+<g id="edge8" class="edge">
+<title>EvidenceTreeCap&#45;R&#45;&gt;EvidenceTreeCap</title>
+<path fill="none" stroke="#44413b" d="M53.96,-177.4C73.16,-177.4 100.47,-177.4 127,-177.4"/>
+<polygon fill="#44413b" stroke="#44413b" points="126.68,-179.85 133.68,-177.4 126.68,-174.95 126.68,-179.85"/>
+<text xml:space="preserve" text-anchor="middle" x="131.23" y="-167.5" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- EvidenceTreeDescend&#45;&gt;EvidenceTree -->
+<g id="edge12" class="edge">
+<title>EvidenceTreeDescend&#45;&gt;EvidenceTree</title>
+<path fill="none" stroke="#44413b" d="M307.35,-105.66C329.93,-107.46 354.63,-109.87 379.13,-112.64"/>
+<polygon fill="#44413b" stroke="#44413b" points="378.69,-115.06 385.92,-113.42 379.25,-110.19 378.69,-115.06"/>
+</g>
+<!-- EvidenceTreeDescend&#45;R&#45;&gt;EvidenceTreeDescend -->
+<g id="edge11" class="edge">
+<title>EvidenceTreeDescend&#45;R&#45;&gt;EvidenceTreeDescend</title>
+<path fill="none" stroke="#44413b" d="M53.96,-106.4C69.08,-106.4 89.23,-106.4 110.07,-106.4"/>
+<polygon fill="#44413b" stroke="#44413b" points="109.88,-108.85 116.88,-106.4 109.88,-103.95 109.88,-108.85"/>
+<text xml:space="preserve" text-anchor="middle" x="114.42" y="-96.5" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;EvidenceTreeDescend&#45;&gt;EvidenceTreeDescend -->
+<g id="edge13" class="edge">
+<title>w&#45;EvidenceTreeDescend&#45;&gt;EvidenceTreeDescend</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M212.89,-54.56C212.89,-62.29 212.89,-70.02 212.89,-77.76"/>
+<polygon fill="#44413b" stroke="#44413b" points="210.44,-77.63 212.89,-84.63 215.34,-77.64 210.44,-77.63"/>
+</g>
+<!-- EvidenceTreeOpen&#45;&gt;QrBucket -->
+<g id="edge16" class="edge">
+<title>EvidenceTreeOpen&#45;&gt;QrBucket</title>
+<path fill="none" stroke="#44413b" d="M936.07,-418.4C957.46,-418.4 981.36,-418.4 1005.62,-418.4"/>
+<polygon fill="#44413b" stroke="#44413b" points="1005.35,-420.85 1012.35,-418.4 1005.35,-415.95 1005.35,-420.85"/>
+</g>
+<!-- EvidenceTreeOpen&#45;R&#45;&gt;EvidenceTreeOpen -->
+<g id="edge15" class="edge">
+<title>EvidenceTreeOpen&#45;R&#45;&gt;EvidenceTreeOpen</title>
+<path fill="none" stroke="#44413b" d="M558.97,-418.4C602.78,-418.4 693.56,-418.4 762.64,-418.4"/>
+<polygon fill="#44413b" stroke="#44413b" points="762.43,-420.85 769.43,-418.4 762.43,-415.95 762.43,-420.85"/>
+<text xml:space="preserve" text-anchor="middle" x="766.98" y="-408.5" font-family="Helvetica,sans-Serif" font-size="11.00">R</text>
+</g>
+<!-- w&#45;EvidenceTreeOpen&#45;&gt;EvidenceTreeOpen -->
+<g id="edge17" class="edge">
+<title>w&#45;EvidenceTreeOpen&#45;&gt;EvidenceTreeOpen</title>
+<path fill="none" stroke="#44413b" stroke-dasharray="5,2" d="M853.51,-366.5C853.51,-374.24 853.51,-381.98 853.51,-389.73"/>
+<polygon fill="#44413b" stroke="#44413b" points="851.06,-389.61 853.51,-396.61 855.96,-389.61 851.06,-389.61"/>
+</g>
+<!-- EvidenceTreeLeafPair&#45;&gt;EvidenceTreePair -->
+<g id="edge20" class="edge">
+<title>EvidenceTreeLeafPair&#45;&gt;EvidenceTreePair</title>
+<path fill="none" stroke="#44413b" d="M1601.29,-293.28C1623.77,-289.32 1648.45,-284.96 1673,-280.64"/>
+<polygon fill="#44413b" stroke="#44413b" points="1673.36,-283.06 1679.83,-279.43 1672.51,-278.23 1673.36,-283.06"/>
+</g>
+<!-- EvidenceTree -->
+<g id="node-EvidenceTree" class="node" data-node="EvidenceTree" role="button" tabindex="0" aria-label="Inspect EvidenceTree">
+<title>EvidenceTree</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="532.1" cy="-141.4" rx="160.32" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="479.66" y="-159.9" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">EvidenceTree</text>
+<text xml:space="preserve" text-anchor="start" x="435.26" y="-135.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch, anchor_start, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="482.61" y="-111.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">discriminant, root</text>
+</g>
+<!-- EvidenceTreePair -->
+<g id="node-EvidenceTreePair" class="node" data-node="EvidenceTreePair" role="button" tabindex="0" aria-label="Inspect EvidenceTreePair">
+<title>EvidenceTreePair</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="1828.49" cy="-253.4" rx="160.32" ry="63.02"/>
+<text xml:space="preserve" text-anchor="start" x="1760.93" y="-271.9" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">EvidenceTreePair</text>
+<text xml:space="preserve" text-anchor="start" x="1731.65" y="-247.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch, anchor_start, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="1755.15" y="-223.5" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">discriminant, first, second</text>
+</g>
+<!-- QrBucket -->
+<g id="node-QrBucket" class="node" data-node="QrBucket" role="button" tabindex="0" aria-label="Inspect QrBucket">
+<title>QrBucket</title>
+<ellipse fill="#fffef9" stroke="#171717" stroke-width="1.5" cx="1182.06" cy="-418.4" rx="167.45" ry="79.71"/>
+<text xml:space="preserve" text-anchor="start" x="1146.63" y="-448.7" font-family="Helvetica,sans-Serif" font-size="17.00" fill="#171717">QrBucket</text>
+<text xml:space="preserve" text-anchor="start" x="1085.22" y="-423.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">epoch, anchor_start, anchor_next</text>
+<text xml:space="preserve" text-anchor="start" x="1080.17" y="-400.3" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">discriminant, profile, contents_hash</text>
+<text xml:space="preserve" text-anchor="start" x="1114.86" y="-376.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">O1: TachygramSetPoly</text>
+</g>
+<!-- EvidenceTreePairFuse -->
+<g id="node-EvidenceTreePairFuse" class="node" data-node="EvidenceTreePairFuse" role="button" tabindex="0" aria-label="Inspect EvidenceTreePairFuse">
+<title>EvidenceTreePairFuse</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1603.17,-258.08 1414.51,-258.08 1414.51,-218.72 1603.17,-218.72 1603.17,-258.08"/>
+<text xml:space="preserve" text-anchor="middle" x="1508.84" y="-233.6" font-family="Helvetica,sans-Serif" font-size="16.00">EvidenceTreePairFuse</text>
+</g>
+<!-- EvidenceTreeFuse -->
+<g id="node-EvidenceTreeFuse" class="node" data-node="EvidenceTreeFuse" role="button" tabindex="0" aria-label="Inspect EvidenceTreeFuse">
+<title>EvidenceTreeFuse</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="2214.01,-161.08 2053.8,-161.08 2053.8,-121.72 2214.01,-121.72 2214.01,-161.08"/>
+<text xml:space="preserve" text-anchor="middle" x="2133.91" y="-136.6" font-family="Helvetica,sans-Serif" font-size="16.00">EvidenceTreeFuse</text>
+</g>
+<!-- EvidenceTreeCap -->
+<g id="node-EvidenceTreeCap" class="node" data-node="EvidenceTreeCap" role="button" tabindex="0" aria-label="Inspect EvidenceTreeCap">
+<title>EvidenceTreeCap</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="289.89,-197.08 135.9,-197.08 135.9,-157.72 289.89,-157.72 289.89,-197.08"/>
+<text xml:space="preserve" text-anchor="middle" x="212.89" y="-172.6" font-family="Helvetica,sans-Serif" font-size="16.00">EvidenceTreeCap</text>
+</g>
+<!-- EvidenceTreeCap&#45;R -->
+<g id="node7" class="node">
+<title>EvidenceTreeCap&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="54,-195.4 0,-195.4 0,-159.4 54,-159.4 54,-195.4"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-171.7" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- EvidenceTreeDescend -->
+<g id="node-EvidenceTreeDescend" class="node" data-node="EvidenceTreeDescend" role="button" tabindex="0" aria-label="Inspect EvidenceTreeDescend">
+<title>EvidenceTreeDescend</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="306.79,-126.08 119,-126.08 119,-86.72 306.79,-86.72 306.79,-126.08"/>
+<text xml:space="preserve" text-anchor="middle" x="212.89" y="-101.6" font-family="Helvetica,sans-Serif" font-size="16.00">EvidenceTreeDescend</text>
+</g>
+<!-- EvidenceTreeDescend&#45;R -->
+<g id="node9" class="node">
+<title>EvidenceTreeDescend&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="54,-124.4 0,-124.4 0,-88.4 54,-88.4 54,-124.4"/>
+<text xml:space="preserve" text-anchor="middle" x="27" y="-100.7" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;EvidenceTreeDescend -->
+<g id="node10" class="node">
+<title>w&#45;EvidenceTreeDescend</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="244.23,-54.8 181.55,-54.8 181.55,0 244.23,0 244.23,-54.8"/>
+<text xml:space="preserve" text-anchor="start" x="194.55" y="-35.9" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="200.24" y="-12.9" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">path</text>
+</g>
+<!-- EvidenceTreeOpen -->
+<g id="node-EvidenceTreeOpen" class="node" data-node="EvidenceTreeOpen" role="button" tabindex="0" aria-label="Inspect EvidenceTreeOpen">
+<title>EvidenceTreeOpen</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="935.4,-438.08 771.62,-438.08 771.62,-398.72 935.4,-398.72 935.4,-438.08"/>
+<text xml:space="preserve" text-anchor="middle" x="853.51" y="-413.6" font-family="Helvetica,sans-Serif" font-size="16.00">EvidenceTreeOpen</text>
+</g>
+<!-- EvidenceTreeOpen&#45;R -->
+<g id="node12" class="node">
+<title>EvidenceTreeOpen&#45;R</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="559.1,-436.4 505.1,-436.4 505.1,-400.4 559.1,-400.4 559.1,-436.4"/>
+<text xml:space="preserve" text-anchor="middle" x="532.1" y="-412.7" font-family="Helvetica,sans-Serif" font-size="19.00">×</text>
+</g>
+<!-- w&#45;EvidenceTreeOpen -->
+<g id="node13" class="node">
+<title>w&#45;EvidenceTreeOpen</title>
+<polygon fill="#fffef9" stroke="none" stroke-width="1.5" points="949.61,-366.6 757.42,-366.6 757.42,-288.2 949.61,-288.2 949.61,-366.6"/>
+<text xml:space="preserve" text-anchor="start" x="835.17" y="-347.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#57534e">witness</text>
+<text xml:space="preserve" text-anchor="start" x="835.81" y="-324.7" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#171717">profile</text>
+<text xml:space="preserve" text-anchor="start" x="770.42" y="-301.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#b91c32">contents: TachygramSetPoly</text>
+</g>
+<!-- EvidenceTreeLeafPair -->
+<g id="node-EvidenceTreeLeafPair" class="node" data-node="EvidenceTreeLeafPair" role="button" tabindex="0" aria-label="Inspect EvidenceTreeLeafPair">
+<title>EvidenceTreeLeafPair</title>
+<polygon fill="#fffef9" stroke="#171717" stroke-width="1.5" points="1600.96,-329.08 1416.72,-329.08 1416.72,-289.72 1600.96,-289.72 1600.96,-329.08"/>
+<text xml:space="preserve" text-anchor="middle" x="1508.84" y="-304.6" font-family="Helvetica,sans-Serif" font-size="16.00">EvidenceTreeLeafPair</text>
+</g>
+</g>
+</svg>
